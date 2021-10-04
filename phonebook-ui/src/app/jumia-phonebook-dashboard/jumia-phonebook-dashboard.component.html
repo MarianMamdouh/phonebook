@@ -1,14 +1,35 @@
-<!doctype html>
-<html lang="en">
-<div class="card">
-  <h5>Programmatic Control</h5>
-  <div class="p-mb-3">
-    <p-button type="button" icon="pi pi-chevron-left" (click)="prev()" [disabled]="isFirstPage()" styleClass="p-button-text"></p-button>
-    <p-button type="button" icon="pi pi-refresh" (click)="reset()" styleClass="p-button-text"></p-button>
-    <p-button type="button" icon="pi pi-chevron-right" (click)="next()" [disabled]="isLastPage()" styleClass="p-button-text"></p-button>
+<div class="col-sm-12">
+
+<div class="main-filter-div">
+  <div class="filter-div">
+    <h4>Select a country:</h4>
+    <span class="p-float-label">
+    <p-dropdown id="selectCountryDropdown" [autoDisplayFirst]="false" (onChange)="filter()" [showClear]="true" [(ngModel)]="customerFilter.countryNameFilter"
+                [options]="countryNamesOptions"
+                styleClass="filter-dropdown"></p-dropdown>
+    <label for="selectCountryDropdown">Select a country</label>
+      </span>
   </div>
-  <p-table [value]="customers" [paginator]="true" [rows]="rows" [showCurrentPageReport]="true" [(first)]="first"
-           currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10,25,50]">
+  <div class="filter-div">
+    <h4>Select Validity:</h4>
+    <span class="p-float-label">
+    <p-dropdown id="selectValidtyDropdown" [autoDisplayFirst]="false" (onChange)="filter()" [showClear]="true" [(ngModel)]="customerFilter.stateFilter"
+                [options]="stateOptions"
+                styleClass="filter-dropdown"></p-dropdown>
+    <label for="selectValidtyDropdown">Select Validity</label>
+      </span>
+  </div>
+</div>
+
+  <h2>Jumia Phonebook</h2>
+
+<div class="card">
+  <div class="p-mb-3">
+<!--    <p-button type="button" icon="pi pi-chevron-left" (click)="prev()" [disabled]="isFirstPage()" styleClass="p-button-text"></p-button>-->
+<!--    <p-button type="button" icon="pi pi-refresh" (click)="reset()" styleClass="p-button-text"></p-button>-->
+<!--    <p-button type="button" icon="pi pi-chevron-right" (click)="next()" [disabled]="isLastPage()" styleClass="p-button-text"></p-button>-->
+  </div>
+  <p-table #dt [value]="customers" [rows]="pageSize">
     <ng-template pTemplate="header">
       <tr>
         <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
@@ -26,5 +47,10 @@
       </tr>
     </ng-template>
   </p-table>
+  <p-paginator (onPageChange)="getPage($event)" [rowsPerPageOptions]="[10,20,50]" [rows]="10"
+               totalRecords="{{totalRecords}}"></p-paginator>
 </div>
-</html>
+<div id="loader" class="loader">
+  <i class="spinner fa fa-circle-o-notch fa-spin fa-5x"></i>
+</div>
+</div>

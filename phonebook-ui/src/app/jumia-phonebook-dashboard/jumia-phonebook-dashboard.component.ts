@@ -1,16 +1,9 @@
-// import {Component, OnInit} from "@angular/core";
-// import {SelectItem} from 'primeng/api';
-// import {UserService} from '../services/user.service';
-// import {TranslateService} from '@ngx-translate/core';
-// import {PreferencesService} from "../services/preferences.service";
-// import {PrivilegeService} from "../services/privilege.service";
- import {CustomerService} from '../services/customer.service';
-// import {Router} from '@angular/router';
- import {Customer} from '../models/customer';
-// import {Preferences} from "../models/preferences";
-// import {LoggedInUser} from "../models/loggedInUser";
-//import {Page} from "primeng/table"
+import {CustomerService} from '../services/customer.service';
+import {Customer} from '../models/customer';
 import { Component, OnInit } from '@angular/core';
+import { CountryService } from "../services/country.service";
+import { SelectItem } from "primeng/api";
+import { CustomerFilter } from "../models/customer.filter";
 
 @Component({
     selector: 'dashboard',
@@ -19,89 +12,73 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JumiaPhonebookDashboardComponent implements OnInit {
     customers: Customer[] = [];
-    first = 0;
-    rows = 10;
-    totalRecords = 50;
-    // hasOrderReadPrivilege: boolean;
-    // hasShipmentReadPrivilege: boolean;
-    // hasICustomerViewPrivilege: boolean;
-    // hasICustomerUnitViewPrivilege: boolean;
-    // languages: string[] = ["en", "de"];
-    // availableLanguages: SelectItem[] = [];
-    // selectedLanguage: string;
-    // preferences: Preferences;
-    // currentUser: LoggedInUser;
-    //
-    // users: User[] = [];
-    //
-    constructor(private customerService: CustomerService) {
+    totalRecords: number = 0;
+    pageSize: number = 10;
+    rowsPerPageOptions: number[] = [10, 20, 50];
+    selectedPage: number = 0;
+    countryNamesOptions: SelectItem[] = [];
+    stateOptions: SelectItem[] = [];
+    customerFilter: CustomerFilter;
+    selectedCountryNameOption: string;
 
-        // this.fillAvailableLanguages();
-        // this.selectedLanguage = this.translate.currentLang ? this.translate.currentLang : "en";
-        // this.authenticationService.currentUserObserver
-        //     .subscribe((user) => {
-        //         if (user) {
-        //             this.currentUser = user;
-        //             this.hasOrderReadPrivilege = this.privilegeService.hasOrderReadPrivilege();
-        //             this.hasShipmentReadPrivilege = this.privilegeService.hasShipmentReadPrivilege();
-        //             this.hasICustomerViewPrivilege = this.privilegeService.hasCustomerReadPrivilege();
-        //             this.hasICustomerUnitViewPrivilege = this.privilegeService.hasCustomerUnitReadPrivilege();
-        //         } else {
-        //             this.currentUser = null;
-        //         }
-        //     });
-        // preferencesService.currentUserPreferencesCombined.subscribe((preferences) => {
-        //     if (preferences) {
-        //         this.preferences = preferences;
-        //     }
-        // });
+    constructor(private customerService: CustomerService, private countryService: CountryService) {
+        this.customerFilter = new CustomerFilter();
     }
 
     ngOnInit() {
-        this.customerService.getAllCustomers().then(response => {
-            this.customers = response.content;
-            console.log(this.customers);
+        this.getAllCustomers();
+        this.getCountryNames();
+        this.fillStateOptions();
+    }
+
+    getPage(event) {
+        this.selectedPage = event.page;
+        this.pageSize = event.rows;
+        this.getAllCustomers(this.selectedPage, this.pageSize);
+    }
+
+    getAllCustomers(pageNumber?, pageSize?) {
+        return this.customerService.getAllCustomers(pageNumber, pageSize).then(response => {
+                this.customers = response.content;
+                this.totalRecords = response.totalElements;
             }
         ).catch();
     }
 
-    next() {
-        this.first = this.first + this.rows;
+    getCountryNames() {
+        this.countryService.getCountryNames().then(response => {
+            this.fillCountryNamesOptions(response);
+            }
+        )
     }
 
-    prev() {
-        this.first = this.first - this.rows;
+    fillCountryNamesOptions(countryNamesOptions) {
+        this.countryNamesOptions = [];
+        countryNamesOptions.forEach(countryNamesOptions => {
+            this.countryNamesOptions.push({label: countryNamesOptions, value: countryNamesOptions});
+        });
     }
 
-    reset() {
-        this.first = 0;
+    fillStateOptions() {
+        this.stateOptions = [];
+        this.stateOptions.push({label: "True", value: "true"});
+        this.stateOptions.push({label: "False", value: "false"});
     }
 
-    isLastPage(): boolean {
-        return this.customers ? this.first === (this.customers.length - this.rows): true;
-    }
+    filter() {
+        let params = "";
+        if (this.customerFilter.countryNameFilter) {
+            params += "countryCode=" + this.customerFilter.countryNameFilter + "&"
+        }
+        if (this.customerFilter.stateFilter) {
+            params += "state=" + this.customerFilter.stateFilter + "&"
+        }
+        console.log(params);
+        return this.customerService.filterCustomers(params, this.selectedPage, this.pageSize).then(response => {
+                this.customers = response.content;
+                this.totalRecords = response.totalElements;
+            }
+        ).catch();
 
-    isFirstPage(): boolean {
-        return this.customers ? this.first === 0 : true;
     }
-
-    // changeLanguage(): Promise<any> {
-    //     return this.translate.use(this.selectedLanguage)
-    //         .toPromise()
-    //         .then(() => true);
-    // }
-    //
-    // fillAvailableLanguages() {
-    //     for (let language of this.languages) {
-    //         this.availableLanguages.push({label: language, value: language});
-    //     }
-    // }
-    //
-    // logout() {
-    //     this.userService.logout()
-    // }
-    //
-    // isLoggedIn() {
-    //     return this.authenticationService.isLoggedIn();
-    // }
 }

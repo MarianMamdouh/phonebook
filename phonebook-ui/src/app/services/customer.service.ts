@@ -12,21 +12,39 @@ import { Customer } from "../models/customer";
 @Injectable()
 export class CustomerService {
 
-    // username: String;
-    // password: String;
-    //
     constructor(private http: HttpClient, private loader: Loader) {
-
-
     }
 
-    public getAllCustomers(): Promise<any> {
-        return this.http.get(JumiaUrlsConfig.CUSTOMERS_URL).toPromise()
+    public getAllCustomers(selectedPage?: number, pageSize?: number): Promise<any> {
+        //return this.getResult(this.http.get(JumiaUrlsConfig.CUSTOMERS_URL + (!pageSize ? '' : "&size=" + pageSize + "&page=" + selectedPage)));
+        return this.http.get(JumiaUrlsConfig.CUSTOMERS_URL + "?" + (!pageSize ? '' : "&size=" + pageSize + "&page=" + selectedPage))
+            .toPromise()
             .catch(err => {
                 return Promise.reject(err.message || err);
             });
     }
 
+    public filterCustomers(params: string, selectedPage?: number, pageSize?: number): Promise<any> {
+        return this.http.get(JumiaUrlsConfig.CUSTOMERS_FILTER_URL + params + (!pageSize ? '' : "size=" + pageSize + "&page=" + selectedPage))
+            .toPromise()
+            .catch(err => {
+                return Promise.reject(err.message || err);
+            });
+    }
+
+    private getResult(result) {
+        this.loader.animate();
+
+        return result.toPromise()
+            .then(res => {
+                this.loader.stop();
+                return res;
+            })
+            .catch(err => {
+                this.loader.stop();
+                return Promise.reject(err.error || err);
+            });
+    }
     //
     // public get(url, additionalHeaders?, responseType?, withoutSpinner?) {
     //     let headers = this.createHeader();
@@ -127,9 +145,9 @@ export class CustomerService {
     //     return Promise.reject(error);
     // }
     //
-    // public getLoader() {
-    //     return this.loader;
-    // }
+    public getLoader() {
+        return this.loader;
+    }
     //
     // private createHeader(contentType?) {
     //     let headers = new HttpHeaders().set('OMS-Authorization', 'Bearer ' + localStorage.getItem("token"));
@@ -139,16 +157,5 @@ export class CustomerService {
     //     return headers;
     // }
     //
-    // private getResult(result) {
-    //     this.loader.animate();
-    //     return result.toPromise()
-    //         .then(res => {
-    //             this.loader.stop();
-    //             return res;
-    //         })
-    //         .catch(err => {
-    //             this.loader.stop();
-    //             return Promise.reject(err.error || err);
-    //         });
-    // }
+
 }

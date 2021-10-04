@@ -4,6 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { JumiaPhonebookDashboardComponent } from './jumia-phonebook-dashboard/jumia-phonebook-dashboard.component';
 import { CustomerService } from './services/customer.service';
+import { CountryService } from "./services/country.service";
 import { Loader } from './services/loader.service';
 import { HttpClientModule } from '@angular/common/http';
 import {TableModule} from 'primeng/table';
@@ -26,6 +27,7 @@ import {FormsModule} from '@angular/forms';
     FormsModule
   ],
   providers: [CustomerService,
+      CountryService,
   Loader],
   bootstrap: [AppComponent]
 })
