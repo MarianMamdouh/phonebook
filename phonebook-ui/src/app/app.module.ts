@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { JumiaPhonebookDashboardComponent } from './jumia-phonebook-dashboard/jumia-phonebook-dashboard.component';
 import { CustomerService } from './services/customer.service';
 import { CountryService } from "./services/country.service";
-import { Loader } from './services/loader.service';
 import { HttpClientModule } from '@angular/common/http';
 import {TableModule} from 'primeng/table';
 import {PaginatorModule} from 'primeng/paginator';
@@ -26,9 +25,10 @@ import {FormsModule} from '@angular/forms';
     ButtonModule,
     FormsModule
   ],
-  providers: [CustomerService,
-      CountryService,
-  Loader],
+  providers: [
+      CustomerService,
+      CountryService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

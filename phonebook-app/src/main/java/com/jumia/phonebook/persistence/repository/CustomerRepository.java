@@ -17,5 +17,5 @@ import com.jumia.phonebook.persistence.model.Customer;
 public interface CustomerRepository extends JpaRepository<Customer, Long>, PagingAndSortingRepository<Customer, Long> {
 
   Page<Customer> findByPhoneStartsWith(@Param("name") String phone, Pageable pageable);
-  //List<Customer> findByPhoneStartsWith(@Param("name") String phone);
+  List<Customer> findByPhoneStartsWith(@Param("name") String phone);
 }

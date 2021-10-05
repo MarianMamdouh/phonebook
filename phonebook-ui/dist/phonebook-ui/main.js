@@ -33,13 +33,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AppComponent": () => (/* binding */ AppComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ 1841);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/operators */ 8049);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ 8307);
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ 8002);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 7716);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 1841);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 7716);
 /* harmony import */ var _jumia_phonebook_dashboard_jumia_phonebook_dashboard_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./jumia-phonebook-dashboard/jumia-phonebook-dashboard.component */ 931);
-
 
 
 
@@ -51,15 +47,11 @@ class AppComponent {
         this.message = '';
     }
     ngOnInit() {
-        this.http.get('http://localhost:9010/api/book/message').pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_1__.first)(), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_2__.tap)(result => console.log('Message received from the server: ', result)), (0,rxjs_operators__WEBPACK_IMPORTED_MODULE_3__.map)(result => this.message = result.message)).subscribe();
     }
 }
-AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_5__.HttpClient)); };
-AppComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵProvidersFeature"]([_angular_common_http__WEBPACK_IMPORTED_MODULE_5__.HttpClient])], decls: 2, vars: 1, template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtext"](0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](1, "dashboard");
-    } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtextInterpolate1"]("Message from server: ", ctx.message, "\n");
+AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__.HttpClient)); };
+AppComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵProvidersFeature"]([_angular_common_http__WEBPACK_IMPORTED_MODULE_2__.HttpClient])], decls: 1, vars: 0, template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "dashboard");
     } }, directives: [_jumia_phonebook_dashboard_jumia_phonebook_dashboard_component__WEBPACK_IMPORTED_MODULE_0__.JumiaPhonebookDashboardComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyJ9 */"] });
 
 
@@ -81,7 +73,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.component */ 5041);
 /* harmony import */ var _jumia_phonebook_dashboard_jumia_phonebook_dashboard_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./jumia-phonebook-dashboard/jumia-phonebook-dashboard.component */ 931);
 /* harmony import */ var _services_customer_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/customer.service */ 2541);
-/* harmony import */ var _services_loader_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./services/loader.service */ 8555);
+/* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./services/country.service */ 3787);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ 1841);
 /* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! primeng/table */ 3490);
 /* harmony import */ var primeng_paginator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! primeng/paginator */ 6639);
@@ -104,8 +96,10 @@ class AppModule {
 }
 AppModule.ɵfac = function AppModule_Factory(t) { return new (t || AppModule)(); };
 AppModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent] });
-AppModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjector"]({ providers: [_services_customer_service__WEBPACK_IMPORTED_MODULE_2__.CustomerService,
-        _services_loader_service__WEBPACK_IMPORTED_MODULE_3__.Loader], imports: [[
+AppModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjector"]({ providers: [
+        _services_customer_service__WEBPACK_IMPORTED_MODULE_2__.CustomerService,
+        _services_country_service__WEBPACK_IMPORTED_MODULE_3__.CountryService
+    ], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.BrowserModule,
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__.BrowserAnimationsModule,
             _angular_common_http__WEBPACK_IMPORTED_MODULE_7__.HttpClientModule,
@@ -137,157 +131,180 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "JumiaPhonebookDashboardComponent": () => (/* binding */ JumiaPhonebookDashboardComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 7716);
-/* harmony import */ var _services_customer_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/customer.service */ 2541);
-/* harmony import */ var primeng_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! primeng/button */ 4207);
-/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! primeng/table */ 3490);
-/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/api */ 3013);
+/* harmony import */ var _models_customer_filter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/customer.filter */ 1667);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 7716);
+/* harmony import */ var _services_customer_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/customer.service */ 2541);
+/* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/country.service */ 3787);
+/* harmony import */ var primeng_dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/dropdown */ 103);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ 3679);
+/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! primeng/table */ 3490);
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! primeng/api */ 3013);
+/* harmony import */ var primeng_paginator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! primeng/paginator */ 6639);
 
 
 
 
 
-function JumiaPhonebookDashboardComponent_ng_template_9_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "th", 9);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, "Name ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "p-sortIcon", 10);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "th", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Phone Number ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](6, "p-sortIcon", 12);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "th", 13);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8, "Country ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](9, "p-sortIcon", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "th", 15);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, "Name ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](12, "p-sortIcon", 16);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+
+
+
+function JumiaPhonebookDashboardComponent_ng_template_22_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "th", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2, "Name ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](3, "p-sortIcon", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](4, "th", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](5, "Phone Number ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](6, "p-sortIcon", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](7, "th", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](8, "Country ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](9, "p-sortIcon", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](10, "th", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](11, "Name ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](12, "p-sortIcon", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } }
-function JumiaPhonebookDashboardComponent_ng_template_10_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+function JumiaPhonebookDashboardComponent_ng_template_23_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](5, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](7, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const customer_r2 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](customer_r2.name);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](customer_r2.phone);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](customer_r2.countryName);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](customer_r2.valid);
+    const customer_r3 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](customer_r3.name);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](customer_r3.phone);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](customer_r3.countryName);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](customer_r3.valid);
 } }
-const _c0 = function () { return [10, 25, 50]; };
+const _c0 = function () { return [10, 20, 50]; };
 class JumiaPhonebookDashboardComponent {
-    // hasOrderReadPrivilege: boolean;
-    // hasShipmentReadPrivilege: boolean;
-    // hasICustomerViewPrivilege: boolean;
-    // hasICustomerUnitViewPrivilege: boolean;
-    // languages: string[] = ["en", "de"];
-    // availableLanguages: SelectItem[] = [];
-    // selectedLanguage: string;
-    // preferences: Preferences;
-    // currentUser: LoggedInUser;
-    //
-    // users: User[] = [];
-    //
-    constructor(customerService) {
+    constructor(customerService, countryService) {
         this.customerService = customerService;
+        this.countryService = countryService;
         this.customers = [];
-        this.first = 0;
-        this.rows = 10;
-        this.totalRecords = 50;
-        // this.fillAvailableLanguages();
-        // this.selectedLanguage = this.translate.currentLang ? this.translate.currentLang : "en";
-        // this.authenticationService.currentUserObserver
-        //     .subscribe((user) => {
-        //         if (user) {
-        //             this.currentUser = user;
-        //             this.hasOrderReadPrivilege = this.privilegeService.hasOrderReadPrivilege();
-        //             this.hasShipmentReadPrivilege = this.privilegeService.hasShipmentReadPrivilege();
-        //             this.hasICustomerViewPrivilege = this.privilegeService.hasCustomerReadPrivilege();
-        //             this.hasICustomerUnitViewPrivilege = this.privilegeService.hasCustomerUnitReadPrivilege();
-        //         } else {
-        //             this.currentUser = null;
-        //         }
-        //     });
-        // preferencesService.currentUserPreferencesCombined.subscribe((preferences) => {
-        //     if (preferences) {
-        //         this.preferences = preferences;
-        //     }
-        // });
+        this.totalRecords = 0;
+        this.pageSize = 10;
+        this.rowsPerPageOptions = [10, 20, 50];
+        this.selectedPage = 0;
+        this.countryNamesOptions = [];
+        this.stateOptions = [];
+        this.customerFilter = new _models_customer_filter__WEBPACK_IMPORTED_MODULE_0__.CustomerFilter();
     }
     ngOnInit() {
-        this.customerService.getAllCustomers().then(response => {
+        this.filterCustomers();
+        this.getCountryNames();
+        this.fillStateOptions();
+    }
+    getPage(event) {
+        this.selectedPage = event.page;
+        this.pageSize = event.rows;
+        this.filterCustomers();
+    }
+    getCountryNames() {
+        this.countryService.getCountryNames().then(response => {
+            this.fillCountryNamesOptions(response);
+        });
+    }
+    fillCountryNamesOptions(countryNamesOptions) {
+        this.countryNamesOptions = [];
+        countryNamesOptions.forEach(countryNamesOptions => {
+            this.countryNamesOptions.push({ label: countryNamesOptions, value: countryNamesOptions });
+        });
+    }
+    fillStateOptions() {
+        this.stateOptions = [];
+        this.stateOptions.push({ label: "True", value: "true" });
+        this.stateOptions.push({ label: "False", value: "false" });
+    }
+    filterCustomers() {
+        let params = "";
+        if (this.customerFilter.countryNameFilter) {
+            params += "countryName=" + this.customerFilter.countryNameFilter + "&";
+        }
+        if (this.customerFilter.stateFilter) {
+            params += "state=" + this.customerFilter.stateFilter + "&";
+        }
+        return this.customerService.filterCustomers(params, this.selectedPage, this.pageSize).then(response => {
             this.customers = response.content;
-            console.log(this.customers);
+            this.totalRecords = response.totalElements;
         }).catch();
     }
-    next() {
-        this.first = this.first + this.rows;
-    }
-    prev() {
-        this.first = this.first - this.rows;
-    }
-    reset() {
-        this.first = 0;
-    }
-    isLastPage() {
-        return this.customers ? this.first === (this.customers.length - this.rows) : true;
-    }
-    isFirstPage() {
-        return this.customers ? this.first === 0 : true;
-    }
 }
-JumiaPhonebookDashboardComponent.ɵfac = function JumiaPhonebookDashboardComponent_Factory(t) { return new (t || JumiaPhonebookDashboardComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_services_customer_service__WEBPACK_IMPORTED_MODULE_0__.CustomerService)); };
-JumiaPhonebookDashboardComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: JumiaPhonebookDashboardComponent, selectors: [["dashboard"]], decls: 11, vars: 9, consts: [["lang", "en"], [1, "card"], [1, "p-mb-3"], ["type", "button", "icon", "pi pi-chevron-left", "styleClass", "p-button-text", 3, "disabled", "click"], ["type", "button", "icon", "pi pi-refresh", "styleClass", "p-button-text", 3, "click"], ["type", "button", "icon", "pi pi-chevron-right", "styleClass", "p-button-text", 3, "disabled", "click"], ["currentPageReportTemplate", "Showing {first} to {last} of {totalRecords} entries", 3, "value", "paginator", "rows", "showCurrentPageReport", "first", "rowsPerPageOptions", "firstChange"], ["pTemplate", "header"], ["pTemplate", "body"], ["pSortableColumn", "name"], ["field", "name"], ["pSortableColumn", "phone"], ["field", "phone"], ["pSortableColumn", "countryName"], ["field", "countryName"], ["pSortableColumn", "valid"], ["field", "valid"]], template: function JumiaPhonebookDashboardComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "html", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "h5");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "Programmatic Control");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "p-button", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function JumiaPhonebookDashboardComponent_Template_p_button_click_5_listener() { return ctx.prev(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "p-button", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function JumiaPhonebookDashboardComponent_Template_p_button_click_6_listener() { return ctx.reset(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "p-button", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function JumiaPhonebookDashboardComponent_Template_p_button_click_7_listener() { return ctx.next(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "p-table", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("firstChange", function JumiaPhonebookDashboardComponent_Template_p_table_firstChange_8_listener($event) { return ctx.first = $event; });
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](9, JumiaPhonebookDashboardComponent_ng_template_9_Template, 13, 0, "ng-template", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](10, JumiaPhonebookDashboardComponent_ng_template_10_Template, 9, 4, "ng-template", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+JumiaPhonebookDashboardComponent.ɵfac = function JumiaPhonebookDashboardComponent_Factory(t) { return new (t || JumiaPhonebookDashboardComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_services_customer_service__WEBPACK_IMPORTED_MODULE_1__.CustomerService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_services_country_service__WEBPACK_IMPORTED_MODULE_2__.CountryService)); };
+JumiaPhonebookDashboardComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: JumiaPhonebookDashboardComponent, selectors: [["dashboard"]], decls: 25, vars: 14, consts: [[1, "col-sm-12"], [1, "main-filter-div"], [1, "filter-div"], [1, "p-float-label"], ["id", "selectCountryDropdown", "styleClass", "filter-dropdown", 3, "autoDisplayFirst", "showClear", "ngModel", "options", "onChange", "ngModelChange"], ["for", "selectCountryDropdown"], ["id", "selectValidtyDropdown", "styleClass", "filter-dropdown", 3, "autoDisplayFirst", "showClear", "ngModel", "options", "onChange", "ngModelChange"], ["for", "selectValidtyDropdown"], [1, "card"], [1, "p-mb-3"], [3, "value", "rows"], ["dt", ""], ["pTemplate", "header"], ["pTemplate", "body"], [3, "rowsPerPageOptions", "rows", "totalRecords", "onPageChange"], ["pSortableColumn", "name"], ["field", "name"], ["pSortableColumn", "phone"], ["field", "phone"], ["pSortableColumn", "countryName"], ["field", "countryName"], ["pSortableColumn", "valid"], ["field", "valid"]], template: function JumiaPhonebookDashboardComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](2, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "h4");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](4, "Select a country:");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](5, "span", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](6, "p-dropdown", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("onChange", function JumiaPhonebookDashboardComponent_Template_p_dropdown_onChange_6_listener() { return ctx.filterCustomers(); })("ngModelChange", function JumiaPhonebookDashboardComponent_Template_p_dropdown_ngModelChange_6_listener($event) { return ctx.customerFilter.countryNameFilter = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](7, "label", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](8, "Select a country");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](9, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](10, "h4");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](11, "Select Validity:");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](12, "span", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](13, "p-dropdown", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("onChange", function JumiaPhonebookDashboardComponent_Template_p_dropdown_onChange_13_listener() { return ctx.filterCustomers(); })("ngModelChange", function JumiaPhonebookDashboardComponent_Template_p_dropdown_ngModelChange_13_listener($event) { return ctx.customerFilter.stateFilter = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](14, "label", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](15, "Select Validity");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](16, "h2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](17, "Jumia Phonebook");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](18, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](19, "div", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](20, "p-table", 10, 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](22, JumiaPhonebookDashboardComponent_ng_template_22_Template, 13, 0, "ng-template", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](23, JumiaPhonebookDashboardComponent_ng_template_23_Template, 9, 4, "ng-template", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](24, "p-paginator", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("onPageChange", function JumiaPhonebookDashboardComponent_Template_p_paginator_onPageChange_24_listener($event) { return ctx.getPage($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("disabled", ctx.isFirstPage());
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("disabled", ctx.isLastPage());
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("value", ctx.customers)("paginator", true)("rows", ctx.rows)("showCurrentPageReport", true)("first", ctx.first)("rowsPerPageOptions", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction0"](8, _c0));
-    } }, directives: [primeng_button__WEBPACK_IMPORTED_MODULE_2__.Button, primeng_table__WEBPACK_IMPORTED_MODULE_3__.Table, primeng_api__WEBPACK_IMPORTED_MODULE_4__.PrimeTemplate, primeng_table__WEBPACK_IMPORTED_MODULE_3__.SortableColumn, primeng_table__WEBPACK_IMPORTED_MODULE_3__.SortIcon], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJqdW1pYS1waG9uZWJvb2stZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MifQ== */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("autoDisplayFirst", false)("showClear", true)("ngModel", ctx.customerFilter.countryNameFilter)("options", ctx.countryNamesOptions);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("autoDisplayFirst", false)("showClear", true)("ngModel", ctx.customerFilter.stateFilter)("options", ctx.stateOptions);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("value", ctx.customers)("rows", ctx.pageSize);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpropertyInterpolate"]("totalRecords", ctx.totalRecords);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("rowsPerPageOptions", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](13, _c0))("rows", 10);
+    } }, directives: [primeng_dropdown__WEBPACK_IMPORTED_MODULE_4__.Dropdown, _angular_forms__WEBPACK_IMPORTED_MODULE_5__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_5__.NgModel, primeng_table__WEBPACK_IMPORTED_MODULE_6__.Table, primeng_api__WEBPACK_IMPORTED_MODULE_7__.PrimeTemplate, primeng_paginator__WEBPACK_IMPORTED_MODULE_8__.Paginator, primeng_table__WEBPACK_IMPORTED_MODULE_6__.SortableColumn, primeng_table__WEBPACK_IMPORTED_MODULE_6__.SortIcon], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJqdW1pYS1waG9uZWJvb2stZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MifQ== */"] });
 
 
 /***/ }),
@@ -308,9 +325,66 @@ class JumiaUrlsConfig {
         return "http://localhost:9010/";
     }
     static get CUSTOMERS_URL() {
-        return this.ENVIROMENT + "customers?";
+        return this.ENVIROMENT + "customers";
+    }
+    static get COUNTRIES_URL() {
+        return this.ENVIROMENT + "countries";
+    }
+    static get CUSTOMERS_FILTER_URL() {
+        return this.CUSTOMERS_URL + "/filter?";
     }
 }
+
+
+/***/ }),
+
+/***/ 1667:
+/*!*******************************************!*\
+  !*** ./src/app/models/customer.filter.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CustomerFilter": () => (/* binding */ CustomerFilter)
+/* harmony export */ });
+class CustomerFilter {
+}
+
+
+/***/ }),
+
+/***/ 3787:
+/*!*********************************************!*\
+  !*** ./src/app/services/country.service.ts ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CountryService": () => (/* binding */ CountryService)
+/* harmony export */ });
+/* harmony import */ var _jumia_urls_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../jumia-urls-config */ 587);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 7716);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 1841);
+
+
+
+class CountryService {
+    constructor(http) {
+        this.http = http;
+    }
+    getCountryNames() {
+        return this.http.get(_jumia_urls_config__WEBPACK_IMPORTED_MODULE_0__.JumiaUrlsConfig.COUNTRIES_URL).toPromise()
+            .catch(err => {
+            return Promise.reject(err.message || err);
+        });
+    }
+}
+CountryService.ɵfac = function CountryService_Factory(t) { return new (t || CountryService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__.HttpClient)); };
+CountryService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: CountryService, factory: CountryService.ɵfac });
 
 
 /***/ }),
@@ -327,51 +401,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "CustomerService": () => (/* binding */ CustomerService)
 /* harmony export */ });
 /* harmony import */ var _jumia_urls_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../jumia-urls-config */ 587);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 7716);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ 1841);
-/* harmony import */ var _loader_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./loader.service */ 8555);
-
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 7716);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 1841);
 
 
 
 class CustomerService {
-    // username: String;
-    // password: String;
-    //
-    constructor(http, loader) {
+    constructor(http) {
         this.http = http;
-        this.loader = loader;
     }
-    getAllCustomers() {
-        return this.http.get(_jumia_urls_config__WEBPACK_IMPORTED_MODULE_0__.JumiaUrlsConfig.CUSTOMERS_URL).toPromise()
+    getAllCustomers(selectedPage, pageSize) {
+        return this.http.get(_jumia_urls_config__WEBPACK_IMPORTED_MODULE_0__.JumiaUrlsConfig.CUSTOMERS_URL + "?" + (!pageSize ? '' : "&size=" + pageSize + "&page=" + selectedPage))
+            .toPromise()
+            .catch(err => {
+            return Promise.reject(err.message || err);
+        });
+    }
+    filterCustomers(params, selectedPage, pageSize) {
+        return this.http.get(_jumia_urls_config__WEBPACK_IMPORTED_MODULE_0__.JumiaUrlsConfig.CUSTOMERS_FILTER_URL + params + (!pageSize ? '' : "size=" + pageSize + "&page=" + selectedPage))
+            .toPromise()
             .catch(err => {
             return Promise.reject(err.message || err);
         });
     }
 }
-CustomerService.ɵfac = function CustomerService_Factory(t) { return new (t || CustomerService)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpClient), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_loader_service__WEBPACK_IMPORTED_MODULE_1__.Loader)); };
-CustomerService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ token: CustomerService, factory: CustomerService.ɵfac });
-
-
-/***/ }),
-
-/***/ 8555:
-/*!********************************************!*\
-  !*** ./src/app/services/loader.service.ts ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Loader": () => (/* binding */ Loader)
-/* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 7716);
-
-class Loader {
-}
-Loader.ɵfac = function Loader_Factory(t) { return new (t || Loader)(); };
-Loader.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: Loader, factory: Loader.ɵfac });
+CustomerService.ɵfac = function CustomerService_Factory(t) { return new (t || CustomerService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__.HttpClient)); };
+CustomerService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: CustomerService, factory: CustomerService.ɵfac });
 
 
 /***/ }),

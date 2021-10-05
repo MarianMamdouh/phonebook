@@ -14,12 +14,7 @@ export class AppComponent implements OnInit{
 
   constructor(private http: HttpClient) { }
 
-  ngOnInit(): void {
-    this.http.get('http://localhost:9010/api/book/message').pipe(
-      first(),
-      tap(result => console.log('Message received from the server: ', result)),
-      map(result => this.message = (result as any).message)
-    ).subscribe();
+  ngOnInit() {
   }
 
 }

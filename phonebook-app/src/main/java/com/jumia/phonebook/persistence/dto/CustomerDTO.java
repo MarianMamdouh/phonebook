@@ -1,8 +1,5 @@
 package com.jumia.phonebook.persistence.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

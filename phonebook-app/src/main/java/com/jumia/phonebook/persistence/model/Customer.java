@@ -3,20 +3,19 @@ package com.jumia.phonebook.persistence.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.NaturalId;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity(name = "customer")
 @Table(name = "customer")
 @Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Customer {
   @Id
 //  @Column(name = "id", nullable = false)

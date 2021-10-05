@@ -8,7 +8,6 @@ public class PaginationUtils {
 
   private static final String DESC_SORT_DIRECTION = "DESC";
   private static final String ASC_SORT_DIRECTION = "ASC";
-  private static final String ID = "id";
 
   public static Pageable createPageable(int page, int size, String sortBy, String sortDirection) {
     if (!sortDirection.equals(DESC_SORT_DIRECTION) && !sortDirection.equals(ASC_SORT_DIRECTION)) {

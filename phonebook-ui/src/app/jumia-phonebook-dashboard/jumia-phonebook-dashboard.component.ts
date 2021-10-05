@@ -19,14 +19,13 @@ export class JumiaPhonebookDashboardComponent implements OnInit {
     countryNamesOptions: SelectItem[] = [];
     stateOptions: SelectItem[] = [];
     customerFilter: CustomerFilter;
-    selectedCountryNameOption: string;
 
     constructor(private customerService: CustomerService, private countryService: CountryService) {
         this.customerFilter = new CustomerFilter();
     }
 
     ngOnInit() {
-        this.getAllCustomers();
+        this.filterCustomers();
         this.getCountryNames();
         this.fillStateOptions();
     }
@@ -34,15 +33,7 @@ export class JumiaPhonebookDashboardComponent implements OnInit {
     getPage(event) {
         this.selectedPage = event.page;
         this.pageSize = event.rows;
-        this.getAllCustomers(this.selectedPage, this.pageSize);
-    }
-
-    getAllCustomers(pageNumber?, pageSize?) {
-        return this.customerService.getAllCustomers(pageNumber, pageSize).then(response => {
-                this.customers = response.content;
-                this.totalRecords = response.totalElements;
-            }
-        ).catch();
+        this.filterCustomers();
     }
 
     getCountryNames() {
@@ -65,20 +56,18 @@ export class JumiaPhonebookDashboardComponent implements OnInit {
         this.stateOptions.push({label: "False", value: "false"});
     }
 
-    filter() {
+    filterCustomers() {
         let params = "";
         if (this.customerFilter.countryNameFilter) {
-            params += "countryCode=" + this.customerFilter.countryNameFilter + "&"
+            params += "countryName=" + this.customerFilter.countryNameFilter + "&"
         }
         if (this.customerFilter.stateFilter) {
             params += "state=" + this.customerFilter.stateFilter + "&"
         }
-        console.log(params);
         return this.customerService.filterCustomers(params, this.selectedPage, this.pageSize).then(response => {
                 this.customers = response.content;
                 this.totalRecords = response.totalElements;
             }
         ).catch();
-
     }
 }
