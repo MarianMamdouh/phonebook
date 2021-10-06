@@ -1,0 +1,32 @@
+.is-valid-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+}
+
+.is-valid-badge.status-true {
+    background-color: #c8e6c9;
+    color: #256029;
+}
+
+.is-valid-badge.status-false {
+    background-color: #ffcdd2;
+    color: #c63737;
+}
+
+.data-row-striped:nth-child(even) {
+    background: #f68b1e0f;
+}
+
+.data-cell-name { width: 40%; }
+.data-cell-phone { width: 25%; }
+.data-cell-country { width: 25%; }
+.data-cell-valid { width: 10%; }
+
+.dashboard {
+    width: 90%;
+    margin-left: 80px;
+}

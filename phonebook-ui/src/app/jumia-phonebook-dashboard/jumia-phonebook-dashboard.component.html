@@ -1,50 +1,52 @@
-<div class="col-sm-12">
 
-<div class="main-filter-div">
-  <div class="filter-div">
-    <h4>Select a country:</h4>
+  <div class="main-filter-div">
+    <div class="filter-div">
+    <span class="p-float-label">
+      </span>
+    </div>
+    <div class="filter-div">
     <span class="p-float-label">
     <p-dropdown id="selectCountryDropdown" [autoDisplayFirst]="false" (onChange)="filterCustomers()" [showClear]="true" [(ngModel)]="customerFilter.countryNameFilter"
                 [options]="countryNamesOptions"
                 styleClass="filter-dropdown"></p-dropdown>
     <label for="selectCountryDropdown">Select a country</label>
       </span>
-  </div>
-  <div class="filter-div">
-    <h4>Select Validity:</h4>
+    </div>
+    <div class="filter-div">
     <span class="p-float-label">
-    <p-dropdown id="selectValidtyDropdown" [autoDisplayFirst]="false" (onChange)="filterCustomers()" [showClear]="true" [(ngModel)]="customerFilter.stateFilter"
-                [options]="stateOptions"
-                styleClass="filter-dropdown"></p-dropdown>
+    <p-dropdown id="selectValidtyDropdown" [autoDisplayFirst]="false" (onChange)="filterCustomers()" [showClear]="true" [(ngModel)]="customerFilter.stateFilter" [options]="stateOptions" styleClass="filter-dropdown">
+        <ng-template let-option pTemplate="item">
+          <span [class]="'is-valid-badge status-' + option.value">{{option.value}}</span>
+        </ng-template>
+      </p-dropdown>
     <label for="selectValidtyDropdown">Select Validity</label>
       </span>
+    </div>
   </div>
-</div>
 
-  <h2>Jumia Phonebook</h2>
 
-<div class="card">
-  <div class="p-mb-3">
+<hr>
+  <div class="dashboard">
+    <div class="p-mb-3">
+    </div>
+    <p-table #dt [value]="customers" [rows]="pageSize">
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
+          <th pSortableColumn="phone">Phone Number <p-sortIcon field="phone"></p-sortIcon></th>
+          <th pSortableColumn="countryName">Country <p-sortIcon field="countryName"></p-sortIcon></th>
+          <th pSortableColumn="valid">Valid <p-sortIcon field="valid"></p-sortIcon></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-customer>
+        <tr class="data-row-striped">
+          <td class="data-cell-name">{{customer.name}}</td>
+          <td class="data-cell-phone">{{customer.phone}}</td>
+          <td class="data-cell-country">{{customer.countryName}}</td>
+          <td class="data-cell-valid"><span [class]="'is-valid-badge status-' + customer.valid">{{customer.valid}}</span></td>
+        </tr>
+      </ng-template>
+    </p-table>
+    <p-paginator (onPageChange)="getPage($event)" [rowsPerPageOptions]="[10,20,50]" [rows]="10"
+                 totalRecords="{{totalRecords}}"></p-paginator>
   </div>
-  <p-table #dt [value]="customers" [rows]="pageSize">
-    <ng-template pTemplate="header">
-      <tr>
-        <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
-        <th pSortableColumn="phone">Phone Number <p-sortIcon field="phone"></p-sortIcon></th>
-        <th pSortableColumn="countryName">Country <p-sortIcon field="countryName"></p-sortIcon></th>
-        <th pSortableColumn="valid">Name <p-sortIcon field="valid"></p-sortIcon></th>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-customer>
-      <tr>
-        <td>{{customer.name}}</td>
-        <td>{{customer.phone}}</td>
-        <td>{{customer.countryName}}</td>
-        <td>{{customer.valid}}</td>
-      </tr>
-    </ng-template>
-  </p-table>
-  <p-paginator (onPageChange)="getPage($event)" [rowsPerPageOptions]="[10,20,50]" [rows]="10"
-               totalRecords="{{totalRecords}}"></p-paginator>
-</div>
-</div>

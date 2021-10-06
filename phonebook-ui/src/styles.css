@@ -25,3 +25,24 @@
     background: #f68b1e;
     color: black;
 }
+.p-datatable .p-sortable-column.p-highlight {
+    color: #f68b1e !important;
+}
+
+.p-datatable .p-sortable-column.p-highlight .p-sortable-column-icon {
+    color: #f68b1e !important;
+}
+
+.p-datatable .p-sortable-column:focus {
+    box-shadow: inset 0 0 0 0.15rem #f68b1e;
+    outline: 0 none;
+}
+
+.p-dropdown:not(.p-disabled):hover {
+    border-color: #f68b1e;
+}
+
+.p-dropdown:not(.p-disabled).p-focus {
+    box-shadow: inset 0 0 0 0.15rem #f68b1e;
+    border-color: #f68b1e;
+}
