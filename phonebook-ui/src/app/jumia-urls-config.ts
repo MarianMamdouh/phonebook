@@ -1,7 +1,7 @@
 export class JumiaUrlsConfig {
 
     public static get ENVIROMENT(): string {
-        return "http://localhost:9010/";
+        return "http://localhost:8080/";
     }
 
     public static get CUSTOMERS_URL(): string {

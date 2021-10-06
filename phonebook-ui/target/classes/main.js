@@ -330,7 +330,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 class JumiaUrlsConfig {
     static get ENVIROMENT() {
-        return "http://localhost:9010/";
+        return "http://localhost:8080/";
     }
     static get CUSTOMERS_URL() {
         return this.ENVIROMENT + "customers";
