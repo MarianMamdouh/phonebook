@@ -181,5 +181,43 @@ public class CustomerControllerTestIT extends IntegrationTest {
         .andExpect(jsonPath("$.content[0].valid").value("false"));
   }
 
+  @Test
+  public void testFilterCustomersByInvalidCountryName() throws Exception {
+    mockMvc.perform(get("/customers/filter?countryName=Invalid&page=0&size=10"))
+        .andExpect(status().isBadRequest())
+        .andExpect(jsonPath("$.exception").value("IllegalArgumentException"))
+        .andExpect(jsonPath("$.status").value("400"));
+  }
 
+  @Test
+  public void testFilterCustomersByInvalidCountryNameWithNoPaginatonInfo() throws Exception {
+    mockMvc.perform(get("/customers/filter?countryName=Invalid"))
+        .andExpect(status().isBadRequest())
+        .andExpect(jsonPath("$.exception").value("IllegalArgumentException"))
+        .andExpect(jsonPath("$.status").value("400"));
+  }
+
+  @Test
+  public void testFilterCustomersByInvalidState() throws Exception {
+    mockMvc.perform(get("/customers/filter?state=invalid&page=0&size=10"))
+        .andExpect(status().isBadRequest());
+  }
+
+  @Test
+  public void testFilterCustomersByInvalidStateWithNoPaginatonInfo() throws Exception {
+    mockMvc.perform(get("/customers/filter?state=invalid"))
+        .andExpect(status().isBadRequest());
+  }
+
+  @Test
+  public void testFilterCustomersByInvalidCountryNameAndState() throws Exception {
+    mockMvc.perform(get("/customers/filter?countryName=invalid&state=invalid&page=0&size=10"))
+        .andExpect(status().isBadRequest());
+  }
+
+  @Test
+  public void testFilterCustomersByInvalidCountryNameAndStateWithNoPaginatonInfo() throws Exception {
+    mockMvc.perform(get("/customers/filter?countryName=Invalid&state=invalid"))
+        .andExpect(status().isBadRequest());
+  }
 }

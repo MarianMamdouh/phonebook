@@ -2,15 +2,24 @@ package com.jumia.phonebook.cache;
 
 import javax.annotation.PostConstruct;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 
+/*
+ * Setting immutable maps to ease retrieving country related
+ * data based on the given table attached in the exercise.
+ */
+
 @Component
 public class CountryInfoCache {
-  private ImmutableList<String> countries;
-  private ImmutableMap<String , CountryInfo> countryInfoMap;
+
+  private static final Logger LOGGER = LoggerFactory.getLogger(CountryInfoCache.class);
+  private ImmutableList<String> countriesNames;
+  private ImmutableMap<String, CountryInfo> countryInfoMap;
   private ImmutableMap<String, String> countryNameToCountryCodeMap;
 
   @PostConstruct
@@ -31,13 +40,14 @@ public class CountryInfoCache {
          .put("Uganda", "+256")
          .build();
 
-     countries = ImmutableList.<String>builder()
+    countriesNames = ImmutableList.<String>builder()
          .add("Cameroon")
          .add("Ethiopia")
          .add("Morocco")
          .add("Mozambique")
          .add("Uganda")
          .build();
+     LOGGER.info("Regular expressions validating data and country phone numbers have been initialized successfully!");
   }
 
   public CountryInfo getCountryInfo(String phonePrefix) {
@@ -48,7 +58,7 @@ public class CountryInfoCache {
     return this.countryNameToCountryCodeMap.get(countryName);
   }
 
-  public ImmutableList<String> getCountries() {
-    return this.countries;
+  public ImmutableList<String> getCountriesNames() {
+    return this.countriesNames;
   }
 }

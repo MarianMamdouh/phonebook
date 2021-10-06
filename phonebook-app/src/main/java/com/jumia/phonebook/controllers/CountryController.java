@@ -14,6 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.google.common.collect.ImmutableList;
 import com.jumia.phonebook.service.CountryService;
 
+/*
+ * Countries controller to retrieve all of the country names
+ * to be used as a filter dropdown list in the UI part.
+ */
 @RestController
 @CrossOrigin
 @RequestMapping("/countries")
@@ -27,7 +31,7 @@ public class CountryController {
   }
 
   @GetMapping
-  public ResponseEntity<ImmutableList<String>> getCountries() {
-    return ResponseEntity.ok(countryService.getAllCountries());
+  public ResponseEntity<ImmutableList<String>> getCountriesNames() {
+    return ResponseEntity.ok(countryService.getCountriesNames());
   }
 }

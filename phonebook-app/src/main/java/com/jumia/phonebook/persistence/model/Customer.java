@@ -10,7 +10,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name = "customer")
+/*
+ * Cutomer entity is our main entity which represents
+ * the customer in SQLite file that holds the customer id,
+ * name and phone number.
+ */
+
+@Entity
 @Table(name = "customer")
 @Setter
 @Getter
@@ -18,7 +24,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Customer {
   @Id
-//  @Column(name = "id", nullable = false)
+  @Column(name = "id", nullable = false)
   private Long id;
 
   @Column(name = "name")

@@ -4,6 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+/*
+ * Country information model to map the country data
+ * table attached in the exercise.
+ */
+
 @Setter
 @Getter
 @AllArgsConstructor

@@ -4,6 +4,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
+/*
+ * Pagination utility class to wrap our pageable object.
+ */
+
 public class PaginationUtils {
 
   private static final String DESC_SORT_DIRECTION = "DESC";
@@ -13,7 +17,6 @@ public class PaginationUtils {
     if (!sortDirection.equals(DESC_SORT_DIRECTION) && !sortDirection.equals(ASC_SORT_DIRECTION)) {
       throw new IllegalArgumentException();
     }
-    //kan mwgod hena l id shofy mohm wala la2
     return PageRequest.of(page, size, Sort.by(Sort.Direction.valueOf(sortDirection), sortBy));
   }
 }

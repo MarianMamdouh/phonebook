@@ -1,6 +1,5 @@
 package com.jumia.phonebook.controllers;
 
-
 import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +13,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jumia.phonebook.persistence.dto.CustomerDTO;
+import com.jumia.phonebook.mapper.CustomerDTO;
 import com.jumia.phonebook.service.CustomerService;
 
 import io.swagger.v3.oas.annotations.Parameter;
 import com.jumia.phonebook.util.PaginationUtils;
+
+/*
+ * Customer controller to retrieve different pages of customer
+ * data based on the available filters.
+ * if no available filters are present, then it will turn all customer data,
+ * if only state filter is present, then it will filter by state only,
+ * if only country name filter is present, then it will filter by country only,
+ * if both state and country filters are present, then it will filter by both
+ *  country name and state together.
+ */
 
 @RestController
 @CrossOrigin
@@ -33,7 +42,7 @@ public class CustomerController {
   }
 
   @GetMapping
-  public ResponseEntity<Page<CustomerDTO>> filterCustomers(
+  public ResponseEntity<Page<CustomerDTO>> filterCustomers (
       @Parameter(description = "requested page number")
       @RequestParam(value = "page", required = false, defaultValue = "0") Integer page,
       @Parameter(description = "size of the requested page")
@@ -42,8 +51,7 @@ public class CustomerController {
       @RequestParam(value = "sortBy", required = false, defaultValue = "id") String sortBy,
       @Parameter(description = "the direction in which the sorting would be executed. Either "
           + "DESC for descending or ASC for ascending direction.")
-      @RequestParam(value = "sortDirection", required = false, defaultValue = "ASC")
-          String sortDirection,
+      @RequestParam(value = "sortDirection", required = false, defaultValue = "ASC") String sortDirection,
       @Parameter(description = "the phone state to be filtered with")
       @RequestParam(value = "state", required = false) Boolean state,
       @Parameter(description = "the country name to be filtered with")

@@ -19,83 +19,103 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.jumia.phonebook.cache.CountryInfoCache;
-import com.jumia.phonebook.persistence.dto.CustomerConversion;
-import com.jumia.phonebook.persistence.dto.CustomerDTO;
+import com.jumia.phonebook.mapper.CustomerDTOMapper;
+import com.jumia.phonebook.mapper.CustomerDTO;
 import com.jumia.phonebook.persistence.model.Customer;
 import com.jumia.phonebook.persistence.repository.CustomerRepository;
 
+/*
+ * Our customer service layer where we can access
+ * our CustomerRepository to perform all the filtering operations
+ * needed which are:
+ *
+ * if no available filters are present, then all customer data are returned,
+ * if only phone number state filter is present, then it will filter by phone number state only,
+ * if only country name filter is present, then it will filter by country only,
+ * if both phone number state and country filters are present, then it will filter by both
+ * country name and phone number state together.
+ *
+ * it also takes care to map our customer entity to customerDTO model
+ */
 @Service
 public class CustomerServiceImpl implements CustomerService {
   private static final Logger LOGGER = LoggerFactory.getLogger(CustomerServiceImpl.class);
 
   private final CustomerRepository customerRepository;
-  private final CustomerConversion customerConversion;
+  private final CustomerDTOMapper customerDTOMapper;
   private final CountryInfoCache countryInfoCache;
 
   @Autowired
   public CustomerServiceImpl(@Nonnull CustomerRepository customerRepository,
-      @Nonnull CustomerConversion customerConversion,
+      @Nonnull CustomerDTOMapper customerDTOMapper,
       @Nonnull CountryInfoCache countryInfoCache) {
     this.customerRepository = Objects.requireNonNull(customerRepository);
-    this.customerConversion = Objects.requireNonNull(customerConversion);
+    this.customerDTOMapper = Objects.requireNonNull(customerDTOMapper);
     this.countryInfoCache = Objects.requireNonNull(countryInfoCache);
   }
 
   @Override
   @Transactional(readOnly = true)
-  public Page<CustomerDTO> filterCustomers(String countryName, Boolean state, Pageable pageable) {
-    boolean  isFilterByCountry = Optional.ofNullable(countryName).isPresent();
-    boolean isFilterbyState = Optional.ofNullable(state).isPresent();
+  public Page<CustomerDTO> filterCustomers(String countryName, Boolean phoneNumberState, Pageable pageable) {
+    boolean isFilterByCountryName = Optional.ofNullable(countryName).isPresent();
+    boolean isFilterbyPhoneNumberState = Optional.ofNullable(phoneNumberState).isPresent();
 
-    if(!isFilterByCountry && !isFilterbyState) {
+    if(!isFilterByCountryName && !isFilterbyPhoneNumberState) {
       return findAllCustomers(pageable);
-    } else if (!isFilterByCountry) {
-      return findByState(state, pageable);
-    } else if (!isFilterbyState) {
-      return findByCountry(countryName, pageable);
+    } else if (!isFilterByCountryName) {
+      return filterByPhoneNumberState(phoneNumberState, pageable);
+    } else if (!isFilterbyPhoneNumberState) {
+      return filterByCountryName(countryName, pageable);
     }
-    return findByStateAndCountry(countryName, state, pageable);
+    return filterByPhoneNumberStateAndCountry(countryName, phoneNumberState, pageable);
   }
 
   private Page<CustomerDTO> findAllCustomers(Pageable pageable) {
     Page<Customer> customerPage = customerRepository.findAll(pageable);
+    LOGGER.info("Finding all customers data is requested...");
     return toCustomerDTOPage(customerPage);
   }
 
-  private Page<CustomerDTO> findByCountry(String countryName, Pageable pageable) {
-    String countryCode = this.countryInfoCache.getCountryCode(countryName);
+  private Page<CustomerDTO> filterByCountryName(String countryName, Pageable pageable) {
+    String countryCode = getCountryCode(countryName);
     Page<Customer> customerPage = customerRepository.findByPhoneStartsWith("(" + countryCode.substring(1) + ")", pageable);
+    LOGGER.info("Filtering customers data by {} country name is requested...", countryName);
     return toCustomerDTOPage(customerPage);
   }
 
-  private Page<CustomerDTO> findByState(boolean state, Pageable pageable) {
+  private Page<CustomerDTO> filterByPhoneNumberState(boolean phoneNumberState, Pageable pageable) {
     List<Customer> customerList = customerRepository.findAll();
-    return findByState(state, pageable, customerList);
+    LOGGER.info("Filtering customers data by {} valid state is requested...", phoneNumberState);
+    return filterByPhoneNumberState(phoneNumberState, pageable, customerList);
   }
 
-  private Page<CustomerDTO> findByStateAndCountry(String countryName, boolean state, Pageable pageable) {
-    String countryCode = this.countryInfoCache.getCountryCode(countryName);
-    List<Customer> customerList = customerRepository.findByPhoneStartsWith("(" + countryCode.substring(1) + ")");
-    return findByState(state, pageable, customerList);
-  }
-
-  private Page<CustomerDTO> findByState(boolean state, Pageable pageable, List<Customer> customerList) {
+  private Page<CustomerDTO> filterByPhoneNumberState(boolean phoneNumberState, Pageable pageable, List<Customer> customerList) {
     List<CustomerDTO> customerDTOList = toCustomerDTOList(customerList);
     List<CustomerDTO> filteredCustomerDTOList = customerDTOList.stream()
-        .filter(customerDTO -> customerDTO.isValid() == state)
+        .filter(customerDTO -> customerDTO.isValid() == phoneNumberState)
         .collect(Collectors.toList());
     return toCustomerPage(filteredCustomerDTOList, pageable);
   }
 
+  private Page<CustomerDTO> filterByPhoneNumberStateAndCountry(String countryName, boolean phoneNumberState, Pageable pageable) {
+    String countryCode = getCountryCode(countryName);
+    List<Customer> customerList = customerRepository.findByPhoneStartsWith("(" + countryCode.substring(1) + ")");
+    LOGGER.info("Filtering customers data by {} valid state and {} country name is requested...", phoneNumberState, countryName);
+    return filterByPhoneNumberState(phoneNumberState, pageable, customerList);
+  }
+
+  private String getCountryCode(String countryName) {
+    return Optional.ofNullable(this.countryInfoCache.getCountryCode(countryName))
+        .orElseThrow(() -> new IllegalArgumentException("Country name " + countryName + " is invalid."));
+  }
+
   private Page<CustomerDTO> toCustomerDTOPage(Page<Customer> customersPage) {
-    return customersPage.map(customer ->
-        customerConversion.convertToDto(customer));
+    return customersPage.map(customerDTOMapper::convertToDto);
   }
 
   private List<CustomerDTO> toCustomerDTOList(List<Customer> customersPage) {
     return customersPage.stream()
-        .map(customer ->
-        customerConversion.convertToDto(customer))
+        .map(customerDTOMapper::convertToDto)
         .collect(Collectors.toList());
   }
 

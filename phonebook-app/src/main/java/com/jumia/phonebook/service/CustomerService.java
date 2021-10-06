@@ -3,9 +3,8 @@ package com.jumia.phonebook.service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import com.jumia.phonebook.persistence.dto.CustomerDTO;
+import com.jumia.phonebook.mapper.CustomerDTO;
 
 public interface CustomerService {
-
-   Page<CustomerDTO> filterCustomers(String countryCode, Boolean state, Pageable pageable);
+   Page<CustomerDTO> filterCustomers(String countryName, Boolean phoneNumberState, Pageable pageable);
 }
