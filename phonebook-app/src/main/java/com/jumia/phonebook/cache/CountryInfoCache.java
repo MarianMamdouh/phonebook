@@ -55,7 +55,8 @@ public class CountryInfoCache {
   }
 
   public String getCountryCode(String countryName) {
-    return this.countryNameToCountryCodeMap.get(countryName);
+    String capitalizedCountryName = countryName.substring(0, 1).toUpperCase() + countryName.substring(1);
+    return this.countryNameToCountryCodeMap.get(capitalizedCountryName);
   }
 
   public ImmutableList<String> getCountriesNames() {

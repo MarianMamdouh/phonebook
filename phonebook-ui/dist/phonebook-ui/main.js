@@ -33,25 +33,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AppComponent": () => (/* binding */ AppComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ 1841);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 7716);
 /* harmony import */ var _jumia_phonebook_dashboard_jumia_phonebook_dashboard_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./jumia-phonebook-dashboard/jumia-phonebook-dashboard.component */ 931);
 
 
-
-
 class AppComponent {
-    constructor(http) {
-        this.http = http;
+    constructor() {
         this.title = 'phonebook-ui';
         this.message = '';
     }
     ngOnInit() {
     }
 }
-AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__.HttpClient)); };
-AppComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵProvidersFeature"]([_angular_common_http__WEBPACK_IMPORTED_MODULE_2__.HttpClient])], decls: 1, vars: 0, template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "dashboard");
+AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
+AppComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 1, vars: 0, template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "jumia-phonebook-dashboard");
     } }, directives: [_jumia_phonebook_dashboard_jumia_phonebook_dashboard_component__WEBPACK_IMPORTED_MODULE_0__.JumiaPhonebookDashboardComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyJ9 */"] });
 
 
@@ -68,23 +64,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AppModule": () => (/* binding */ AppModule)
 /* harmony export */ });
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ 9075);
-/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ 5835);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser */ 9075);
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/platform-browser/animations */ 5835);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common/http */ 1841);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/forms */ 3679);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.component */ 5041);
 /* harmony import */ var _jumia_phonebook_dashboard_jumia_phonebook_dashboard_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./jumia-phonebook-dashboard/jumia-phonebook-dashboard.component */ 931);
 /* harmony import */ var _services_customer_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/customer.service */ 2541);
 /* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./services/country.service */ 3787);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ 1841);
-/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! primeng/table */ 3490);
-/* harmony import */ var primeng_paginator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! primeng/paginator */ 6639);
-/* harmony import */ var primeng_button__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! primeng/button */ 4207);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/forms */ 3679);
+/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! primeng/table */ 3490);
+/* harmony import */ var primeng_paginator__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! primeng/paginator */ 6639);
+/* harmony import */ var primeng_button__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! primeng/button */ 4207);
+/* harmony import */ var primeng_toast__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! primeng/toast */ 7965);
+/* harmony import */ var primeng_messages__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! primeng/messages */ 3758);
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! primeng/api */ 3013);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 7716);
 
 
 
 
+//Components
 
+
+//Services
+
+
+//Primeng UI Components
 
 
 
@@ -98,24 +103,29 @@ AppModule.ɵfac = function AppModule_Factory(t) { return new (t || AppModule)();
 AppModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent] });
 AppModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjector"]({ providers: [
         _services_customer_service__WEBPACK_IMPORTED_MODULE_2__.CustomerService,
-        _services_country_service__WEBPACK_IMPORTED_MODULE_3__.CountryService
+        _services_country_service__WEBPACK_IMPORTED_MODULE_3__.CountryService,
+        primeng_api__WEBPACK_IMPORTED_MODULE_5__.MessageService
     ], imports: [[
-            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.BrowserModule,
-            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__.BrowserAnimationsModule,
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_7__.HttpClientModule,
-            primeng_table__WEBPACK_IMPORTED_MODULE_8__.TableModule,
-            primeng_paginator__WEBPACK_IMPORTED_MODULE_9__.PaginatorModule,
-            primeng_button__WEBPACK_IMPORTED_MODULE_10__.ButtonModule,
-            _angular_forms__WEBPACK_IMPORTED_MODULE_11__.FormsModule
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__.BrowserModule,
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__.BrowserAnimationsModule,
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_8__.HttpClientModule,
+            primeng_table__WEBPACK_IMPORTED_MODULE_9__.TableModule,
+            primeng_paginator__WEBPACK_IMPORTED_MODULE_10__.PaginatorModule,
+            primeng_button__WEBPACK_IMPORTED_MODULE_11__.ButtonModule,
+            _angular_forms__WEBPACK_IMPORTED_MODULE_12__.FormsModule,
+            primeng_toast__WEBPACK_IMPORTED_MODULE_13__.ToastModule,
+            primeng_messages__WEBPACK_IMPORTED_MODULE_14__.MessagesModule
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent,
-        _jumia_phonebook_dashboard_jumia_phonebook_dashboard_component__WEBPACK_IMPORTED_MODULE_1__.JumiaPhonebookDashboardComponent], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.BrowserModule,
-        _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__.BrowserAnimationsModule,
-        _angular_common_http__WEBPACK_IMPORTED_MODULE_7__.HttpClientModule,
-        primeng_table__WEBPACK_IMPORTED_MODULE_8__.TableModule,
-        primeng_paginator__WEBPACK_IMPORTED_MODULE_9__.PaginatorModule,
-        primeng_button__WEBPACK_IMPORTED_MODULE_10__.ButtonModule,
-        _angular_forms__WEBPACK_IMPORTED_MODULE_11__.FormsModule] }); })();
+        _jumia_phonebook_dashboard_jumia_phonebook_dashboard_component__WEBPACK_IMPORTED_MODULE_1__.JumiaPhonebookDashboardComponent], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__.BrowserModule,
+        _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__.BrowserAnimationsModule,
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_8__.HttpClientModule,
+        primeng_table__WEBPACK_IMPORTED_MODULE_9__.TableModule,
+        primeng_paginator__WEBPACK_IMPORTED_MODULE_10__.PaginatorModule,
+        primeng_button__WEBPACK_IMPORTED_MODULE_11__.ButtonModule,
+        _angular_forms__WEBPACK_IMPORTED_MODULE_12__.FormsModule,
+        primeng_toast__WEBPACK_IMPORTED_MODULE_13__.ToastModule,
+        primeng_messages__WEBPACK_IMPORTED_MODULE_14__.MessagesModule] }); })();
 
 
 /***/ }),
@@ -135,11 +145,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 7716);
 /* harmony import */ var _services_customer_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/customer.service */ 2541);
 /* harmony import */ var _services_country_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/country.service */ 3787);
-/* harmony import */ var primeng_dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/dropdown */ 103);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ 3679);
-/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! primeng/api */ 3013);
-/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! primeng/table */ 3490);
-/* harmony import */ var primeng_paginator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! primeng/paginator */ 6639);
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/api */ 3013);
+/* harmony import */ var primeng_toast__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! primeng/toast */ 7965);
+/* harmony import */ var primeng_dropdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! primeng/dropdown */ 103);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ 3679);
+/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! primeng/table */ 3490);
+/* harmony import */ var primeng_paginator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! primeng/paginator */ 6639);
 
 
 
@@ -149,51 +160,49 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function JumiaPhonebookDashboardComponent_ng_template_11_Template(rf, ctx) { if (rf & 1) {
+
+function JumiaPhonebookDashboardComponent_ng_template_14_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "span");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const option_r4 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵclassMap"]("is-valid-badge status-" + option_r4.value);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](option_r4.value);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](option_r4.label);
 } }
-function JumiaPhonebookDashboardComponent_ng_template_19_Template(rf, ctx) { if (rf & 1) {
+function JumiaPhonebookDashboardComponent_ng_template_21_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "th", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "th", 18);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2, "Name ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](3, "p-sortIcon", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](3, "p-sortIcon", 19);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](4, "th", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](4, "th", 20);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](5, "Phone Number ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](6, "p-sortIcon", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](6, "p-sortIcon", 21);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](7, "th", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](7, "th", 22);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](8, "Country ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](9, "p-sortIcon", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](9, "p-sortIcon", 23);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](10, "th", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](10, "th", 24);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](11, "Valid ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](12, "p-sortIcon", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](12, "p-sortIcon", 25);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } }
-function JumiaPhonebookDashboardComponent_ng_template_20_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "tr", 23);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "td", 24);
+function JumiaPhonebookDashboardComponent_ng_template_22_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "tr", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "td", 27);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "td", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "td", 28);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](5, "td", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](5, "td", 29);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](6);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](7, "td", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](8, "span");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](9);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](7, "td", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](8, "i", 31);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -206,14 +215,13 @@ function JumiaPhonebookDashboardComponent_ng_template_20_Template(rf, ctx) { if 
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](customer_r5.countryName);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵclassMap"]("is-valid-badge status-" + customer_r5.valid);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](customer_r5.valid);
 } }
 const _c0 = function () { return [10, 20, 50]; };
 class JumiaPhonebookDashboardComponent {
-    constructor(customerService, countryService) {
+    constructor(customerService, countryService, messageService) {
         this.customerService = customerService;
         this.countryService = countryService;
+        this.messageService = messageService;
         this.customers = [];
         this.totalRecords = 0;
         this.pageSize = 10;
@@ -221,33 +229,13 @@ class JumiaPhonebookDashboardComponent {
         this.selectedPage = 0;
         this.countryNamesOptions = [];
         this.stateOptions = [];
+        this.msgs = [];
         this.customerFilter = new _models_customer_filter__WEBPACK_IMPORTED_MODULE_0__.CustomerFilter();
     }
     ngOnInit() {
         this.filterCustomers();
         this.getCountryNames();
         this.fillStateOptions();
-    }
-    getPage(event) {
-        this.selectedPage = event.page;
-        this.pageSize = event.rows;
-        this.filterCustomers();
-    }
-    getCountryNames() {
-        this.countryService.getCountryNames().then(response => {
-            this.fillCountryNamesOptions(response);
-        });
-    }
-    fillCountryNamesOptions(countryNamesOptions) {
-        this.countryNamesOptions = [];
-        countryNamesOptions.forEach(countryNamesOptions => {
-            this.countryNamesOptions.push({ label: countryNamesOptions, value: countryNamesOptions });
-        });
-    }
-    fillStateOptions() {
-        this.stateOptions = [];
-        this.stateOptions.push({ label: "True", value: "true" });
-        this.stateOptions.push({ label: "False", value: "false" });
     }
     filterCustomers() {
         let params = "";
@@ -257,62 +245,103 @@ class JumiaPhonebookDashboardComponent {
         if (this.customerFilter.stateFilter) {
             params += "state=" + this.customerFilter.stateFilter + "&";
         }
-        return this.customerService.filterCustomers(params, this.selectedPage, this.pageSize).then(response => {
+        this.clearNotfication();
+        return this.customerService.filterCustomers(params, this.selectedPage, this.pageSize)
+            .then(response => {
             this.customers = response.content;
             this.totalRecords = response.totalElements;
-        }).catch();
+        }).catch(() => {
+            this.showError("Retrieving customer data has failed!");
+        });
+    }
+    getCountryNames() {
+        this.countryService.getCountryNames().then(response => {
+            this.fillCountryNamesOptions(response);
+        });
+    }
+    fillStateOptions() {
+        this.stateOptions = [];
+        this.stateOptions.push({ label: "Valid", value: "true" });
+        this.stateOptions.push({ label: "Invalid", value: "false" });
+    }
+    getPage(event) {
+        this.selectedPage = event.page;
+        this.pageSize = event.rows;
+        this.filterCustomers();
+    }
+    fillCountryNamesOptions(countryNamesOptions) {
+        this.countryNamesOptions = [];
+        countryNamesOptions.forEach(countryNamesOptions => {
+            this.countryNamesOptions.push({ label: countryNamesOptions, value: countryNamesOptions });
+        });
+    }
+    clearNotfication() {
+        this.msgs = [];
+    }
+    showError(text) {
+        this.messageService.add({ severity: 'error', summary: 'Error', detail: text });
     }
 }
-JumiaPhonebookDashboardComponent.ɵfac = function JumiaPhonebookDashboardComponent_Factory(t) { return new (t || JumiaPhonebookDashboardComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_services_customer_service__WEBPACK_IMPORTED_MODULE_1__.CustomerService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_services_country_service__WEBPACK_IMPORTED_MODULE_2__.CountryService)); };
-JumiaPhonebookDashboardComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: JumiaPhonebookDashboardComponent, selectors: [["dashboard"]], decls: 22, vars: 14, consts: [[1, "main-filter-div"], [1, "filter-div"], [1, "p-float-label"], ["id", "selectCountryDropdown", "styleClass", "filter-dropdown", 3, "autoDisplayFirst", "showClear", "ngModel", "options", "onChange", "ngModelChange"], ["for", "selectCountryDropdown"], ["id", "selectValidtyDropdown", "styleClass", "filter-dropdown", 3, "autoDisplayFirst", "showClear", "ngModel", "options", "onChange", "ngModelChange"], ["pTemplate", "item"], ["for", "selectValidtyDropdown"], [1, "dashboard"], [1, "p-mb-3"], [3, "value", "rows"], ["dt", ""], ["pTemplate", "header"], ["pTemplate", "body"], [3, "rowsPerPageOptions", "rows", "totalRecords", "onPageChange"], ["pSortableColumn", "name"], ["field", "name"], ["pSortableColumn", "phone"], ["field", "phone"], ["pSortableColumn", "countryName"], ["field", "countryName"], ["pSortableColumn", "valid"], ["field", "valid"], [1, "data-row-striped"], [1, "data-cell-name"], [1, "data-cell-phone"], [1, "data-cell-country"], [1, "data-cell-valid"]], template: function JumiaPhonebookDashboardComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "div", 0);
+JumiaPhonebookDashboardComponent.ɵfac = function JumiaPhonebookDashboardComponent_Factory(t) { return new (t || JumiaPhonebookDashboardComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_services_customer_service__WEBPACK_IMPORTED_MODULE_1__.CustomerService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_services_country_service__WEBPACK_IMPORTED_MODULE_2__.CountryService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](primeng_api__WEBPACK_IMPORTED_MODULE_4__.MessageService)); };
+JumiaPhonebookDashboardComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: JumiaPhonebookDashboardComponent, selectors: [["jumia-phonebook-dashboard"]], decls: 27, vars: 15, consts: [["position", "top-right"], [1, "app-header"], [1, "pi", "pi-book", "app-header-icon"], [1, "filters"], [1, "filter-div"], [1, "p-float-label"], ["id", "selectCountryDropdown", "styleClass", "filter-dropdown", 3, "autoDisplayFirst", "showClear", "ngModel", "options", "onChange", "ngModelChange"], ["for", "selectCountryDropdown"], ["id", "selectValidtyDropdown", "styleClass", "filter-dropdown", 3, "autoDisplayFirst", "showClear", "ngModel", "options", "onChange", "ngModelChange"], ["pTemplate", "item"], ["for", "selectValidtyDropdown"], [1, "dashboard"], [3, "value", "rows"], ["dt", ""], ["pTemplate", "header"], ["pTemplate", "body"], [1, "total-records"], [3, "rowsPerPageOptions", "rows", "totalRecords", "onPageChange"], ["pSortableColumn", "name"], ["field", "name"], ["pSortableColumn", "phone"], ["field", "phone"], ["pSortableColumn", "countryName"], ["field", "countryName"], ["pSortableColumn", "valid"], ["field", "valid"], [1, "data-row-striped"], [1, "data-cell-name"], [1, "data-cell-phone"], [1, "data-cell-country"], [1, "data-cell-valid"], [1, "pi", "pi-circle-on"]], template: function JumiaPhonebookDashboardComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "p-toast", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](2, "span", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](2, "h2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](3, "Jumia Phonebook");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](4, "i", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](4, "span", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](5, "p-dropdown", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("onChange", function JumiaPhonebookDashboardComponent_Template_p_dropdown_onChange_5_listener() { return ctx.filterCustomers(); })("ngModelChange", function JumiaPhonebookDashboardComponent_Template_p_dropdown_ngModelChange_5_listener($event) { return ctx.customerFilter.countryNameFilter = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](5, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](6, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](7, "span", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](8, "p-dropdown", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("onChange", function JumiaPhonebookDashboardComponent_Template_p_dropdown_onChange_8_listener() { return ctx.filterCustomers(); })("ngModelChange", function JumiaPhonebookDashboardComponent_Template_p_dropdown_ngModelChange_8_listener($event) { return ctx.customerFilter.countryNameFilter = $event; });
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](6, "label", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](7, "Select a country");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](8, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](9, "span", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](10, "p-dropdown", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("onChange", function JumiaPhonebookDashboardComponent_Template_p_dropdown_onChange_10_listener() { return ctx.filterCustomers(); })("ngModelChange", function JumiaPhonebookDashboardComponent_Template_p_dropdown_ngModelChange_10_listener($event) { return ctx.customerFilter.stateFilter = $event; });
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](11, JumiaPhonebookDashboardComponent_ng_template_11_Template, 2, 3, "ng-template", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](12, "label", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](13, "Select Validity");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](9, "label", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](10, "Filter by Country");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](11, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](12, "span", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](13, "p-dropdown", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("onChange", function JumiaPhonebookDashboardComponent_Template_p_dropdown_onChange_13_listener() { return ctx.filterCustomers(); })("ngModelChange", function JumiaPhonebookDashboardComponent_Template_p_dropdown_ngModelChange_13_listener($event) { return ctx.customerFilter.stateFilter = $event; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](14, JumiaPhonebookDashboardComponent_ng_template_14_Template, 2, 1, "ng-template", 9);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](14, "hr");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](15, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](16, "div", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](17, "p-table", 10, 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](19, JumiaPhonebookDashboardComponent_ng_template_19_Template, 13, 0, "ng-template", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](20, JumiaPhonebookDashboardComponent_ng_template_20_Template, 10, 6, "ng-template", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](15, "label", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](16, "Filter by Validity");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](21, "p-paginator", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("onPageChange", function JumiaPhonebookDashboardComponent_Template_p_paginator_onPageChange_21_listener($event) { return ctx.getPage($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](17, "hr");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](18, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](19, "p-table", 12, 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](21, JumiaPhonebookDashboardComponent_ng_template_21_Template, 13, 0, "ng-template", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](22, JumiaPhonebookDashboardComponent_ng_template_22_Template, 9, 5, "ng-template", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](23, "div");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](24, "p", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](26, "p-paginator", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("onPageChange", function JumiaPhonebookDashboardComponent_Template_p_paginator_onPageChange_26_listener($event) { return ctx.getPage($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](8);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("autoDisplayFirst", false)("showClear", true)("ngModel", ctx.customerFilter.countryNameFilter)("options", ctx.countryNamesOptions);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("autoDisplayFirst", false)("showClear", true)("ngModel", ctx.customerFilter.stateFilter)("options", ctx.stateOptions);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](6);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("value", ctx.customers)("rows", ctx.pageSize);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate1"]("Total number of records: ", ctx.totalRecords, "");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpropertyInterpolate"]("totalRecords", ctx.totalRecords);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("rowsPerPageOptions", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](13, _c0))("rows", 10);
-    } }, directives: [primeng_dropdown__WEBPACK_IMPORTED_MODULE_4__.Dropdown, _angular_forms__WEBPACK_IMPORTED_MODULE_5__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_5__.NgModel, primeng_api__WEBPACK_IMPORTED_MODULE_6__.PrimeTemplate, primeng_table__WEBPACK_IMPORTED_MODULE_7__.Table, primeng_paginator__WEBPACK_IMPORTED_MODULE_8__.Paginator, primeng_table__WEBPACK_IMPORTED_MODULE_7__.SortableColumn, primeng_table__WEBPACK_IMPORTED_MODULE_7__.SortIcon], styles: [".is-valid-badge[_ngcontent-%COMP%] {\n    border-radius: 2px;\n    padding: .25em .5rem;\n    text-transform: uppercase;\n    font-weight: 700;\n    font-size: 12px;\n    letter-spacing: .3px;\n}\n\n.is-valid-badge.status-true[_ngcontent-%COMP%] {\n    background-color: #c8e6c9;\n    color: #256029;\n}\n\n.is-valid-badge.status-false[_ngcontent-%COMP%] {\n    background-color: #ffcdd2;\n    color: #c63737;\n}\n\n.data-row-striped[_ngcontent-%COMP%]:nth-child(even) {\n    background: #f68b1e0f;\n}\n\n.data-cell-name[_ngcontent-%COMP%] { width: 40%; }\n\n.data-cell-phone[_ngcontent-%COMP%] { width: 25%; }\n\n.data-cell-country[_ngcontent-%COMP%] { width: 25%; }\n\n.data-cell-valid[_ngcontent-%COMP%] { width: 10%; }\n\n.dashboard[_ngcontent-%COMP%] {\n    width: 90%;\n    margin-left: 80px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImp1bWlhLXBob25lYm9vay1kYXNoYm9hcmQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtJQUNsQixvQkFBb0I7SUFDcEIseUJBQXlCO0lBQ3pCLGdCQUFnQjtJQUNoQixlQUFlO0lBQ2Ysb0JBQW9CO0FBQ3hCOztBQUVBO0lBQ0kseUJBQXlCO0lBQ3pCLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSx5QkFBeUI7SUFDekIsY0FBYztBQUNsQjs7QUFFQTtJQUNJLHFCQUFxQjtBQUN6Qjs7QUFFQSxrQkFBa0IsVUFBVSxFQUFFOztBQUM5QixtQkFBbUIsVUFBVSxFQUFFOztBQUMvQixxQkFBcUIsVUFBVSxFQUFFOztBQUNqQyxtQkFBbUIsVUFBVSxFQUFFOztBQUUvQjtJQUNJLFVBQVU7SUFDVixpQkFBaUI7QUFDckIiLCJmaWxlIjoianVtaWEtcGhvbmVib29rLWRhc2hib2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmlzLXZhbGlkLWJhZGdlIHtcbiAgICBib3JkZXItcmFkaXVzOiAycHg7XG4gICAgcGFkZGluZzogLjI1ZW0gLjVyZW07XG4gICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbiAgICBmb250LXdlaWdodDogNzAwO1xuICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICBsZXR0ZXItc3BhY2luZzogLjNweDtcbn1cblxuLmlzLXZhbGlkLWJhZGdlLnN0YXR1cy10cnVlIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjYzhlNmM5O1xuICAgIGNvbG9yOiAjMjU2MDI5O1xufVxuXG4uaXMtdmFsaWQtYmFkZ2Uuc3RhdHVzLWZhbHNlIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZjZGQyO1xuICAgIGNvbG9yOiAjYzYzNzM3O1xufVxuXG4uZGF0YS1yb3ctc3RyaXBlZDpudGgtY2hpbGQoZXZlbikge1xuICAgIGJhY2tncm91bmQ6ICNmNjhiMWUwZjtcbn1cblxuLmRhdGEtY2VsbC1uYW1lIHsgd2lkdGg6IDQwJTsgfVxuLmRhdGEtY2VsbC1waG9uZSB7IHdpZHRoOiAyNSU7IH1cbi5kYXRhLWNlbGwtY291bnRyeSB7IHdpZHRoOiAyNSU7IH1cbi5kYXRhLWNlbGwtdmFsaWQgeyB3aWR0aDogMTAlOyB9XG5cbi5kYXNoYm9hcmQge1xuICAgIHdpZHRoOiA5MCU7XG4gICAgbWFyZ2luLWxlZnQ6IDgwcHg7XG59XG4iXX0= */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("rowsPerPageOptions", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction0"](14, _c0))("rows", 10);
+    } }, directives: [primeng_toast__WEBPACK_IMPORTED_MODULE_5__.Toast, primeng_dropdown__WEBPACK_IMPORTED_MODULE_6__.Dropdown, _angular_forms__WEBPACK_IMPORTED_MODULE_7__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_7__.NgModel, primeng_api__WEBPACK_IMPORTED_MODULE_4__.PrimeTemplate, primeng_table__WEBPACK_IMPORTED_MODULE_8__.Table, primeng_paginator__WEBPACK_IMPORTED_MODULE_9__.Paginator, primeng_table__WEBPACK_IMPORTED_MODULE_8__.SortableColumn, primeng_table__WEBPACK_IMPORTED_MODULE_8__.SortIcon], styles: [".is-valid-badge[_ngcontent-%COMP%] {\n    border-radius: 2px;\n    padding: .25em .5rem;\n    text-transform: uppercase;\n    font-weight: 700;\n    font-size: 1.3em;\n    letter-spacing: .3px;\n}\n\n.is-valid-badge.status-true[_ngcontent-%COMP%] {\n    color: #43A047;\n}\n\n.is-valid-badge.status-false[_ngcontent-%COMP%] {\n    color: #E53935;\n}\n\n.data-row-striped[_ngcontent-%COMP%]:nth-child(even) {\n    background: #f68b1e0f;\n}\n\n.data-cell-name[_ngcontent-%COMP%] {\n    width: 40%;\n}\n\n.data-cell-phone[_ngcontent-%COMP%] {\n    width: 25%;\n}\n\n.data-cell-country[_ngcontent-%COMP%] {\n    width: 25%;\n}\n\n.data-cell-valid[_ngcontent-%COMP%] {\n    width: 10%;\n}\n\n.dashboard[_ngcontent-%COMP%] {\n    width: 90%;\n    margin-left: 80px;\n}\n\n.total-records[_ngcontent-%COMP%] {\n    text-align: -webkit-center;\n    color: #495057;\n    font-weight: normal;\n    margin-bottom: 0px;\n}\n\n.app-header[_ngcontent-%COMP%] {\n    display: flex;\n    justify-content: space-between;\n    padding: 0px 30px;\n    color: #495057;\n}\n\n.filters[_ngcontent-%COMP%] {\n    display: inline-flex;\n    align-items: center;\n}\n\n.app-header-icon[_ngcontent-%COMP%] {\n    margin-left: 20px;\n    font-size: 1.3rem;\n}\n\np-table[_ngcontent-%COMP%]     th {\n    background: #f68b1e !important;\n    color: white !important;\n}\n\ndiv.app-header[_ngcontent-%COMP%]     .p-dropdown {\n    width: 300px !important;\n    margin: 2px;\n}\n\np-table[_ngcontent-%COMP%]     .p-sortable-column, p-table[_ngcontent-%COMP%]     .p-sortable-column-icon {\n    color: white !important;\n}\n\np-table[_ngcontent-%COMP%]     .p-highlight, p-table[_ngcontent-%COMP%]     .p-highlight   .p-sortable-column-icon{\n    color: white !important;\n}\n\np-table[_ngcontent-%COMP%]     .p-sortable-column:focus {\n    box-shadow: inset 0 0 0 0.15rem #f68b1e;\n    background-color: white;\n    outline: 0 none;\n}\n\ndiv.app-header[_ngcontent-%COMP%]     .p-dropdown:not(.p-disabled):hover {\n    border-color: #f68b1e !important;\n}\n\ndiv.app-header[_ngcontent-%COMP%]     .p-dropdown:not(.p-disabled).p-focus {\n    box-shadow: inset 0 0 0 0.15rem #f68b1e !important;\n    border-color: #f68b1e !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImp1bWlhLXBob25lYm9vay1kYXNoYm9hcmQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGtCQUFrQjtJQUNsQixvQkFBb0I7SUFDcEIseUJBQXlCO0lBQ3pCLGdCQUFnQjtJQUNoQixnQkFBZ0I7SUFDaEIsb0JBQW9CO0FBQ3hCOztBQUVBO0lBQ0ksY0FBYztBQUNsQjs7QUFFQTtJQUNJLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxxQkFBcUI7QUFDekI7O0FBRUE7SUFDSSxVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxVQUFVO0FBQ2Q7O0FBRUE7SUFDSSxVQUFVO0lBQ1YsaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksMEJBQTBCO0lBQzFCLGNBQWM7SUFDZCxtQkFBbUI7SUFDbkIsa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksYUFBYTtJQUNiLDhCQUE4QjtJQUM5QixpQkFBaUI7SUFDakIsY0FBYztBQUNsQjs7QUFFQTtJQUNJLG9CQUFvQjtJQUNwQixtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxpQkFBaUI7SUFDakIsaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksOEJBQThCO0lBQzlCLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLHVCQUF1QjtJQUN2QixXQUFXO0FBQ2Y7O0FBRUE7O0lBRUksdUJBQXVCO0FBQzNCOztBQUVBOztJQUVJLHVCQUF1QjtBQUMzQjs7QUFFQTtJQUNJLHVDQUF1QztJQUN2Qyx1QkFBdUI7SUFDdkIsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLGdDQUFnQztBQUNwQzs7QUFFQTtJQUNJLGtEQUFrRDtJQUNsRCxnQ0FBZ0M7QUFDcEMiLCJmaWxlIjoianVtaWEtcGhvbmVib29rLWRhc2hib2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmlzLXZhbGlkLWJhZGdlIHtcbiAgICBib3JkZXItcmFkaXVzOiAycHg7XG4gICAgcGFkZGluZzogLjI1ZW0gLjVyZW07XG4gICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbiAgICBmb250LXdlaWdodDogNzAwO1xuICAgIGZvbnQtc2l6ZTogMS4zZW07XG4gICAgbGV0dGVyLXNwYWNpbmc6IC4zcHg7XG59XG5cbi5pcy12YWxpZC1iYWRnZS5zdGF0dXMtdHJ1ZSB7XG4gICAgY29sb3I6ICM0M0EwNDc7XG59XG5cbi5pcy12YWxpZC1iYWRnZS5zdGF0dXMtZmFsc2Uge1xuICAgIGNvbG9yOiAjRTUzOTM1O1xufVxuXG4uZGF0YS1yb3ctc3RyaXBlZDpudGgtY2hpbGQoZXZlbikge1xuICAgIGJhY2tncm91bmQ6ICNmNjhiMWUwZjtcbn1cblxuLmRhdGEtY2VsbC1uYW1lIHtcbiAgICB3aWR0aDogNDAlO1xufVxuXG4uZGF0YS1jZWxsLXBob25lIHtcbiAgICB3aWR0aDogMjUlO1xufVxuXG4uZGF0YS1jZWxsLWNvdW50cnkge1xuICAgIHdpZHRoOiAyNSU7XG59XG5cbi5kYXRhLWNlbGwtdmFsaWQge1xuICAgIHdpZHRoOiAxMCU7XG59XG5cbi5kYXNoYm9hcmQge1xuICAgIHdpZHRoOiA5MCU7XG4gICAgbWFyZ2luLWxlZnQ6IDgwcHg7XG59XG5cbi50b3RhbC1yZWNvcmRzIHtcbiAgICB0ZXh0LWFsaWduOiAtd2Via2l0LWNlbnRlcjtcbiAgICBjb2xvcjogIzQ5NTA1NztcbiAgICBmb250LXdlaWdodDogbm9ybWFsO1xuICAgIG1hcmdpbi1ib3R0b206IDBweDtcbn1cblxuLmFwcC1oZWFkZXIge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuICAgIHBhZGRpbmc6IDBweCAzMHB4O1xuICAgIGNvbG9yOiAjNDk1MDU3O1xufVxuXG4uZmlsdGVycyB7XG4gICAgZGlzcGxheTogaW5saW5lLWZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLmFwcC1oZWFkZXItaWNvbiB7XG4gICAgbWFyZ2luLWxlZnQ6IDIwcHg7XG4gICAgZm9udC1zaXplOiAxLjNyZW07XG59XG5cbnAtdGFibGUgPj4+IHRoIHtcbiAgICBiYWNrZ3JvdW5kOiAjZjY4YjFlICFpbXBvcnRhbnQ7XG4gICAgY29sb3I6IHdoaXRlICFpbXBvcnRhbnQ7XG59XG5cbmRpdi5hcHAtaGVhZGVyID4+PiAucC1kcm9wZG93biB7XG4gICAgd2lkdGg6IDMwMHB4ICFpbXBvcnRhbnQ7XG4gICAgbWFyZ2luOiAycHg7XG59XG5cbnAtdGFibGUgPj4+IC5wLXNvcnRhYmxlLWNvbHVtbixcbnAtdGFibGUgPj4+IC5wLXNvcnRhYmxlLWNvbHVtbi1pY29uIHtcbiAgICBjb2xvcjogd2hpdGUgIWltcG9ydGFudDtcbn1cblxucC10YWJsZSA+Pj4gLnAtaGlnaGxpZ2h0LFxucC10YWJsZSA+Pj4gLnAtaGlnaGxpZ2h0ID4+PiAucC1zb3J0YWJsZS1jb2x1bW4taWNvbntcbiAgICBjb2xvcjogd2hpdGUgIWltcG9ydGFudDtcbn1cblxucC10YWJsZSA+Pj4gLnAtc29ydGFibGUtY29sdW1uOmZvY3VzIHtcbiAgICBib3gtc2hhZG93OiBpbnNldCAwIDAgMCAwLjE1cmVtICNmNjhiMWU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgb3V0bGluZTogMCBub25lO1xufVxuXG5kaXYuYXBwLWhlYWRlciA+Pj4gLnAtZHJvcGRvd246bm90KC5wLWRpc2FibGVkKTpob3ZlciB7XG4gICAgYm9yZGVyLWNvbG9yOiAjZjY4YjFlICFpbXBvcnRhbnQ7XG59XG5cbmRpdi5hcHAtaGVhZGVyID4+PiAucC1kcm9wZG93bjpub3QoLnAtZGlzYWJsZWQpLnAtZm9jdXMge1xuICAgIGJveC1zaGFkb3c6IGluc2V0IDAgMCAwIDAuMTVyZW0gI2Y2OGIxZSAhaW1wb3J0YW50O1xuICAgIGJvcmRlci1jb2xvcjogI2Y2OGIxZSAhaW1wb3J0YW50O1xufVxuIl19 */"] });
 
 
 /***/ }),
@@ -332,14 +361,11 @@ class JumiaUrlsConfig {
     static get ENVIROMENT() {
         return "http://localhost:8080/";
     }
-    static get CUSTOMERS_URL() {
-        return this.ENVIROMENT + "customers";
-    }
     static get COUNTRIES_URL() {
         return this.ENVIROMENT + "countries";
     }
     static get CUSTOMERS_FILTER_URL() {
-        return this.CUSTOMERS_URL + "/filter?";
+        return this.ENVIROMENT + "customers/filter?";
     }
 }
 
@@ -385,7 +411,8 @@ class CountryService {
         this.http = http;
     }
     getCountryNames() {
-        return this.http.get(_jumia_urls_config__WEBPACK_IMPORTED_MODULE_0__.JumiaUrlsConfig.COUNTRIES_URL).toPromise()
+        return this.http.get(_jumia_urls_config__WEBPACK_IMPORTED_MODULE_0__.JumiaUrlsConfig.COUNTRIES_URL)
+            .toPromise()
             .catch(err => {
             return Promise.reject(err.message || err);
         });
@@ -417,13 +444,6 @@ __webpack_require__.r(__webpack_exports__);
 class CustomerService {
     constructor(http) {
         this.http = http;
-    }
-    getAllCustomers(selectedPage, pageSize) {
-        return this.http.get(_jumia_urls_config__WEBPACK_IMPORTED_MODULE_0__.JumiaUrlsConfig.CUSTOMERS_URL + "?" + (!pageSize ? '' : "&size=" + pageSize + "&page=" + selectedPage))
-            .toPromise()
-            .catch(err => {
-            return Promise.reject(err.message || err);
-        });
     }
     filterCustomers(params, selectedPage, pageSize) {
         return this.http.get(_jumia_urls_config__WEBPACK_IMPORTED_MODULE_0__.JumiaUrlsConfig.CUSTOMERS_FILTER_URL + params + (!pageSize ? '' : "size=" + pageSize + "&page=" + selectedPage))

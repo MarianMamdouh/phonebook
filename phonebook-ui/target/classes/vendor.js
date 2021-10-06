@@ -70283,6 +70283,549 @@ InputTextModule.ɵinj = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0_
 
 /***/ }),
 
+/***/ 3758:
+/*!***********************************************************!*\
+  !*** ./node_modules/primeng/fesm2015/primeng-messages.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Messages": () => (/* binding */ Messages),
+/* harmony export */   "MessagesModule": () => (/* binding */ MessagesModule)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 7716);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 8583);
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/animations */ 7238);
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! primeng/api */ 3013);
+/* harmony import */ var primeng_ripple__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! primeng/ripple */ 9309);
+
+
+
+
+
+
+
+
+
+
+function Messages_ng_container_1_div_1_ng_container_3_span_1_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "span", 11);
+  }
+
+  if (rf & 2) {
+    const msg_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2).$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", msg_r4.summary, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+  }
+}
+
+function Messages_ng_container_1_div_1_ng_container_3_span_2_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "span", 12);
+  }
+
+  if (rf & 2) {
+    const msg_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2).$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", msg_r4.detail, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+  }
+}
+
+function Messages_ng_container_1_div_1_ng_container_3_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, Messages_ng_container_1_div_1_ng_container_3_span_1_Template, 1, 1, "span", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, Messages_ng_container_1_div_1_ng_container_3_span_2_Template, 1, 1, "span", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+  }
+
+  if (rf & 2) {
+    const msg_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", msg_r4.summary);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", msg_r4.detail);
+  }
+}
+
+function Messages_ng_container_1_div_1_ng_template_4_span_0_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+
+  if (rf & 2) {
+    const msg_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2).$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](msg_r4.summary);
+  }
+}
+
+function Messages_ng_container_1_div_1_ng_template_4_span_1_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+
+  if (rf & 2) {
+    const msg_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2).$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](msg_r4.detail);
+  }
+}
+
+function Messages_ng_container_1_div_1_ng_template_4_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, Messages_ng_container_1_div_1_ng_template_4_span_0_Template, 2, 1, "span", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, Messages_ng_container_1_div_1_ng_template_4_span_1_Template, 2, 1, "span", 14);
+  }
+
+  if (rf & 2) {
+    const msg_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", msg_r4.summary);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", msg_r4.detail);
+  }
+}
+
+function Messages_ng_container_1_div_1_button_6_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r22 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function Messages_ng_container_1_div_1_button_6_Template_button_click_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r22);
+      const i_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().index;
+      const ctx_r20 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+      return ctx_r20.removeMessage(i_r5);
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "i", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+}
+
+const _c0 = function (a0, a1) {
+  return {
+    showTransitionParams: a0,
+    hideTransitionParams: a1
+  };
+};
+
+const _c1 = function (a1) {
+  return {
+    value: "visible",
+    params: a1
+  };
+};
+
+const _c2 = function (a0, a1, a2, a3) {
+  return {
+    "pi-info-circle": a0,
+    "pi-check": a1,
+    "pi-exclamation-triangle": a2,
+    "pi-times-circle": a3
+  };
+};
+
+function Messages_ng_container_1_div_1_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "span", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, Messages_ng_container_1_div_1_ng_container_3_Template, 3, 2, "ng-container", 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, Messages_ng_container_1_div_1_ng_template_4_Template, 2, 2, "ng-template", null, 7, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, Messages_ng_container_1_div_1_button_6_Template, 2, 0, "button", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+
+  if (rf & 2) {
+    const msg_r4 = ctx.$implicit;
+
+    const _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](5);
+
+    const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", "p-message p-message-" + msg_r4.severity)("@messageAnimation", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](11, _c1, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction2"](8, _c0, ctx_r3.showTransitionOptions, ctx_r3.hideTransitionOptions)));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"]("p-message-icon pi" + (msg_r4.icon ? " " + msg_r4.icon : ""));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction4"](13, _c2, msg_r4.severity === "info", msg_r4.severity === "success", msg_r4.severity === "warn", msg_r4.severity === "error"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx_r3.escape)("ngIfElse", _r7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r3.closable);
+  }
+}
+
+function Messages_ng_container_1_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, Messages_ng_container_1_div_1_Template, 7, 18, "div", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+  }
+
+  if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.value);
+  }
+}
+
+function Messages_ng_template_2_ng_container_2_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainer"](0);
+  }
+}
+
+function Messages_ng_template_2_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, Messages_ng_template_2_ng_container_2_Template, 1, 0, "ng-container", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+
+  if (rf & 2) {
+    const ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", "p-message p-message-" + ctx_r2.severity);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", ctx_r2.contentTemplate);
+  }
+}
+
+class Messages {
+  constructor(messageService, el, cd) {
+    this.messageService = messageService;
+    this.el = el;
+    this.cd = cd;
+    this.closable = true;
+    this.enableService = true;
+    this.escape = true;
+    this.showTransitionOptions = '300ms ease-out';
+    this.hideTransitionOptions = '200ms cubic-bezier(0.86, 0, 0.07, 1)';
+    this.valueChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.EventEmitter();
+  }
+
+  ngAfterContentInit() {
+    this.templates.forEach(item => {
+      switch (item.getType()) {
+        case 'content':
+          this.contentTemplate = item.template;
+          break;
+
+        default:
+          this.contentTemplate = item.template;
+          break;
+      }
+    });
+
+    if (this.messageService && this.enableService && !this.contentTemplate) {
+      this.messageSubscription = this.messageService.messageObserver.subscribe(messages => {
+        if (messages) {
+          if (messages instanceof Array) {
+            let filteredMessages = messages.filter(m => this.key === m.key);
+            this.value = this.value ? [...this.value, ...filteredMessages] : [...filteredMessages];
+          } else if (this.key === messages.key) {
+            this.value = this.value ? [...this.value, ...[messages]] : [messages];
+          }
+
+          this.cd.markForCheck();
+        }
+      });
+      this.clearSubscription = this.messageService.clearObserver.subscribe(key => {
+        if (key) {
+          if (this.key === key) {
+            this.value = null;
+          }
+        } else {
+          this.value = null;
+        }
+
+        this.cd.markForCheck();
+      });
+    }
+  }
+
+  hasMessages() {
+    let parentEl = this.el.nativeElement.parentElement;
+
+    if (parentEl && parentEl.offsetParent) {
+      return this.contentTemplate != null || this.value && this.value.length > 0;
+    }
+
+    return false;
+  }
+
+  clear() {
+    this.value = [];
+    this.valueChange.emit(this.value);
+  }
+
+  removeMessage(i) {
+    this.value = this.value.filter((msg, index) => index !== i);
+    this.valueChange.emit(this.value);
+  }
+
+  get icon() {
+    const severity = this.severity || (this.hasMessages() ? this.value[0].severity : null);
+
+    if (this.hasMessages()) {
+      switch (severity) {
+        case 'success':
+          return 'pi-check';
+          break;
+
+        case 'info':
+          return 'pi-info-circle';
+          break;
+
+        case 'error':
+          return 'pi-times';
+          break;
+
+        case 'warn':
+          return 'pi-exclamation-triangle';
+          break;
+
+        default:
+          return 'pi-info-circle';
+          break;
+      }
+    }
+
+    return null;
+  }
+
+  ngOnDestroy() {
+    if (this.messageSubscription) {
+      this.messageSubscription.unsubscribe();
+    }
+
+    if (this.clearSubscription) {
+      this.clearSubscription.unsubscribe();
+    }
+  }
+
+}
+
+Messages.ɵfac = function Messages_Factory(t) {
+  return new (t || Messages)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](primeng_api__WEBPACK_IMPORTED_MODULE_1__.MessageService, 8), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__.ElementRef), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectorRef));
+};
+
+Messages.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: Messages,
+  selectors: [["p-messages"]],
+  contentQueries: function Messages_ContentQueries(rf, ctx, dirIndex) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵcontentQuery"](dirIndex, primeng_api__WEBPACK_IMPORTED_MODULE_1__.PrimeTemplate, 4);
+    }
+
+    if (rf & 2) {
+      let _t;
+
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.templates = _t);
+    }
+  },
+  hostAttrs: [1, "p-element"],
+  inputs: {
+    value: "value",
+    closable: "closable",
+    style: "style",
+    styleClass: "styleClass",
+    enableService: "enableService",
+    key: "key",
+    escape: "escape",
+    severity: "severity",
+    showTransitionOptions: "showTransitionOptions",
+    hideTransitionOptions: "hideTransitionOptions"
+  },
+  outputs: {
+    valueChange: "valueChange"
+  },
+  decls: 4,
+  vars: 5,
+  consts: [["role", "alert", 1, "p-messages", "p-component", 3, "ngStyle"], [4, "ngIf", "ngIfElse"], ["staticMessage", ""], ["role", "alert", 3, "ngClass", 4, "ngFor", "ngForOf"], ["role", "alert", 3, "ngClass"], [1, "p-message-wrapper"], [3, "ngClass"], ["escapeOut", ""], ["class", "p-message-close p-link", "type", "button", "pRipple", "", 3, "click", 4, "ngIf"], ["class", "p-message-summary", 3, "innerHTML", 4, "ngIf"], ["class", "p-message-detail", 3, "innerHTML", 4, "ngIf"], [1, "p-message-summary", 3, "innerHTML"], [1, "p-message-detail", 3, "innerHTML"], ["class", "p-message-summary", 4, "ngIf"], ["class", "p-message-detail", 4, "ngIf"], [1, "p-message-summary"], [1, "p-message-detail"], ["type", "button", "pRipple", "", 1, "p-message-close", "p-link", 3, "click"], [1, "p-message-close-icon", "pi", "pi-times"], [4, "ngTemplateOutlet"]],
+  template: function Messages_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, Messages_ng_container_1_Template, 2, 1, "ng-container", 1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, Messages_ng_template_2_Template, 3, 2, "ng-template", null, 2, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    }
+
+    if (rf & 2) {
+      const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](3);
+
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx.styleClass);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngStyle", ctx.style);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.contentTemplate)("ngIfElse", _r1);
+    }
+  },
+  directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__.NgStyle, _angular_common__WEBPACK_IMPORTED_MODULE_2__.NgIf, _angular_common__WEBPACK_IMPORTED_MODULE_2__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_2__.NgClass, primeng_ripple__WEBPACK_IMPORTED_MODULE_3__.Ripple, _angular_common__WEBPACK_IMPORTED_MODULE_2__.NgTemplateOutlet],
+  styles: [".p-message-close,.p-message-wrapper{display:flex;align-items:center}.p-message-close{justify-content:center}.p-message-close.p-link{margin-left:auto;overflow:hidden;position:relative}"],
+  encapsulation: 2,
+  data: {
+    animation: [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_4__.trigger)('messageAnimation', [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_4__.transition)(':enter', [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_4__.style)({
+      opacity: 0,
+      transform: 'translateY(-25%)'
+    }), (0,_angular_animations__WEBPACK_IMPORTED_MODULE_4__.animate)('{{showTransitionParams}}')]), (0,_angular_animations__WEBPACK_IMPORTED_MODULE_4__.transition)(':leave', [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_4__.animate)('{{hideTransitionParams}}', (0,_angular_animations__WEBPACK_IMPORTED_MODULE_4__.style)({
+      height: 0,
+      marginTop: 0,
+      marginBottom: 0,
+      marginLeft: 0,
+      marginRight: 0,
+      overflow: 'hidden',
+      opacity: 0
+    }))])])]
+  },
+  changeDetection: 0
+});
+
+(function () {
+  (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](Messages, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Component,
+    args: [{
+      selector: 'p-messages',
+      template: `
+        <div class="p-messages p-component" role="alert" [ngStyle]="style" [class]="styleClass">
+            <ng-container *ngIf="!contentTemplate; else staticMessage">
+                <div *ngFor="let msg of value; let i=index" [ngClass]="'p-message p-message-' + msg.severity" role="alert"
+                    [@messageAnimation]="{value: 'visible', params: {showTransitionParams: showTransitionOptions, hideTransitionParams: hideTransitionOptions}}">
+                    <div class="p-message-wrapper">
+                       <span [class]="'p-message-icon pi' + (msg.icon ? ' ' + msg.icon : '')" [ngClass]="{'pi-info-circle': msg.severity === 'info',
+                            'pi-check': msg.severity === 'success',
+                            'pi-exclamation-triangle': msg.severity === 'warn',
+                            'pi-times-circle': msg.severity === 'error'}"></span>
+                        <ng-container *ngIf="!escape; else escapeOut">
+                            <span *ngIf="msg.summary" class="p-message-summary" [innerHTML]="msg.summary"></span>
+                            <span *ngIf="msg.detail" class="p-message-detail" [innerHTML]="msg.detail"></span>
+                        </ng-container>
+                        <ng-template #escapeOut>
+                            <span *ngIf="msg.summary" class="p-message-summary">{{msg.summary}}</span>
+                            <span *ngIf="msg.detail" class="p-message-detail">{{msg.detail}}</span>
+                        </ng-template>
+                        <button class="p-message-close p-link" (click)="removeMessage(i)" *ngIf="closable" type="button" pRipple>
+                            <i class="p-message-close-icon pi pi-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-template #staticMessage>
+                <div [ngClass]="'p-message p-message-' + severity" role="alert">
+                    <div class="p-message-wrapper">
+                        <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+                    </div>
+                </div>
+            </ng-template>
+            </div>
+    `,
+      animations: [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_4__.trigger)('messageAnimation', [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_4__.transition)(':enter', [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_4__.style)({
+        opacity: 0,
+        transform: 'translateY(-25%)'
+      }), (0,_angular_animations__WEBPACK_IMPORTED_MODULE_4__.animate)('{{showTransitionParams}}')]), (0,_angular_animations__WEBPACK_IMPORTED_MODULE_4__.transition)(':leave', [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_4__.animate)('{{hideTransitionParams}}', (0,_angular_animations__WEBPACK_IMPORTED_MODULE_4__.style)({
+        height: 0,
+        marginTop: 0,
+        marginBottom: 0,
+        marginLeft: 0,
+        marginRight: 0,
+        overflow: 'hidden',
+        opacity: 0
+      }))])])],
+      changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectionStrategy.OnPush,
+      encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ViewEncapsulation.None,
+      styleUrls: ['./messages.css'],
+      host: {
+        'class': 'p-element'
+      }
+    }]
+  }], function () {
+    return [{
+      type: primeng_api__WEBPACK_IMPORTED_MODULE_1__.MessageService,
+      decorators: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Optional
+      }]
+    }, {
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ElementRef
+    }, {
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectorRef
+    }];
+  }, {
+    value: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    closable: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    style: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    styleClass: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    enableService: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    key: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    escape: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    severity: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    showTransitionOptions: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    hideTransitionOptions: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    templates: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ContentChildren,
+      args: [primeng_api__WEBPACK_IMPORTED_MODULE_1__.PrimeTemplate]
+    }],
+    valueChange: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Output
+    }]
+  });
+})();
+
+class MessagesModule {}
+
+MessagesModule.ɵfac = function MessagesModule_Factory(t) {
+  return new (t || MessagesModule)();
+};
+
+MessagesModule.ɵmod = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+  type: MessagesModule
+});
+MessagesModule.ɵinj = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+  imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_2__.CommonModule, primeng_ripple__WEBPACK_IMPORTED_MODULE_3__.RippleModule]]
+});
+
+(function () {
+  (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](MessagesModule, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.NgModule,
+    args: [{
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__.CommonModule, primeng_ripple__WEBPACK_IMPORTED_MODULE_3__.RippleModule],
+      exports: [Messages],
+      declarations: [Messages]
+    }]
+  }], null, null);
+})();
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+ //# sourceMappingURL=primeng-messages.js.map
+
+/***/ }),
+
 /***/ 6639:
 /*!************************************************************!*\
   !*** ./node_modules/primeng/fesm2015/primeng-paginator.js ***!
@@ -79522,6 +80065,719 @@ TableModule.ɵinj = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["�
 
 
  //# sourceMappingURL=primeng-table.js.map
+
+/***/ }),
+
+/***/ 7965:
+/*!********************************************************!*\
+  !*** ./node_modules/primeng/fesm2015/primeng-toast.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Toast": () => (/* binding */ Toast),
+/* harmony export */   "ToastItem": () => (/* binding */ ToastItem),
+/* harmony export */   "ToastModule": () => (/* binding */ ToastModule)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 7716);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ 8583);
+/* harmony import */ var primeng_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! primeng/dom */ 1818);
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! primeng/api */ 3013);
+/* harmony import */ var primeng_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/utils */ 6988);
+/* harmony import */ var primeng_ripple__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! primeng/ripple */ 9309);
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/animations */ 7238);
+
+
+
+
+
+
+
+
+
+
+
+const _c0 = ["container"];
+
+const _c1 = function (a0, a1, a2, a3) {
+  return {
+    "pi-info-circle": a0,
+    "pi-exclamation-triangle": a1,
+    "pi-times-circle": a2,
+    "pi-check": a3
+  };
+};
+
+function ToastItem_ng_container_3_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
+  }
+
+  if (rf & 2) {
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"]("p-toast-message-icon pi" + (ctx_r1.message.icon ? " " + ctx_r1.message.icon : ""));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction4"](5, _c1, ctx_r1.message.severity == "info", ctx_r1.message.severity == "warn", ctx_r1.message.severity == "error", ctx_r1.message.severity == "success"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r1.message.summary);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r1.message.detail);
+  }
+}
+
+function ToastItem_ng_container_4_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainer"](0);
+  }
+}
+
+function ToastItem_button_5_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ToastItem_button_5_Template_button_click_0_listener($event) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5);
+      const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+      return ctx_r4.onCloseIconClick($event);
+    })("keydown.enter", function ToastItem_button_5_Template_button_keydown_enter_0_listener($event) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5);
+      const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+      return ctx_r6.onCloseIconClick($event);
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+}
+
+const _c2 = function (a0) {
+  return [a0, "p-toast-message"];
+};
+
+const _c3 = function (a0, a1, a2, a3) {
+  return {
+    showTransformParams: a0,
+    hideTransformParams: a1,
+    showTransitionParams: a2,
+    hideTransitionParams: a3
+  };
+};
+
+const _c4 = function (a1) {
+  return {
+    value: "visible",
+    params: a1
+  };
+};
+
+const _c5 = function (a0) {
+  return {
+    $implicit: a0
+  };
+};
+
+function Toast_p_toastItem_2_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p-toastItem", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("onClose", function Toast_p_toastItem_2_Template_p_toastItem_onClose_0_listener($event) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5);
+      const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+      return ctx_r4.onMessageClose($event);
+    })("@toastAnimation.start", function Toast_p_toastItem_2_Template_p_toastItem_animation_toastAnimation_start_0_listener($event) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r5);
+      const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+      return ctx_r6.onAnimationStart($event);
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+
+  if (rf & 2) {
+    const msg_r2 = ctx.$implicit;
+    const i_r3 = ctx.index;
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("message", msg_r2)("index", i_r3)("template", ctx_r1.template)("@toastAnimation", undefined)("showTransformOptions", ctx_r1.showTransformOptions)("hideTransformOptions", ctx_r1.hideTransformOptions)("showTransitionOptions", ctx_r1.showTransitionOptions)("hideTransitionOptions", ctx_r1.hideTransitionOptions);
+  }
+}
+
+class ToastItem {
+  constructor(zone) {
+    this.zone = zone;
+    this.onClose = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.EventEmitter();
+  }
+
+  ngAfterViewInit() {
+    this.initTimeout();
+  }
+
+  initTimeout() {
+    if (!this.message.sticky) {
+      this.zone.runOutsideAngular(() => {
+        this.timeout = setTimeout(() => {
+          this.onClose.emit({
+            index: this.index,
+            message: this.message
+          });
+        }, this.message.life || 3000);
+      });
+    }
+  }
+
+  clearTimeout() {
+    if (this.timeout) {
+      clearTimeout(this.timeout);
+      this.timeout = null;
+    }
+  }
+
+  onMouseEnter() {
+    this.clearTimeout();
+  }
+
+  onMouseLeave() {
+    this.initTimeout();
+  }
+
+  onCloseIconClick(event) {
+    this.clearTimeout();
+    this.onClose.emit({
+      index: this.index,
+      message: this.message
+    });
+    event.preventDefault();
+  }
+
+  ngOnDestroy() {
+    this.clearTimeout();
+  }
+
+}
+
+ToastItem.ɵfac = function ToastItem_Factory(t) {
+  return new (t || ToastItem)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__.NgZone));
+};
+
+ToastItem.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: ToastItem,
+  selectors: [["p-toastItem"]],
+  viewQuery: function ToastItem_Query(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_c0, 5);
+    }
+
+    if (rf & 2) {
+      let _t;
+
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.containerViewChild = _t.first);
+    }
+  },
+  hostAttrs: [1, "p-element"],
+  inputs: {
+    message: "message",
+    index: "index",
+    template: "template",
+    showTransformOptions: "showTransformOptions",
+    hideTransformOptions: "hideTransformOptions",
+    showTransitionOptions: "showTransitionOptions",
+    hideTransitionOptions: "hideTransitionOptions"
+  },
+  outputs: {
+    onClose: "onClose"
+  },
+  decls: 6,
+  vars: 21,
+  consts: [[3, "ngClass", "mouseenter", "mouseleave"], ["container", ""], ["role", "alert", "aria-live", "assertive", "aria-atomic", "true", 1, "p-toast-message-content", 3, "ngClass"], [4, "ngIf"], [4, "ngTemplateOutlet", "ngTemplateOutletContext"], ["type", "button", "class", "p-toast-icon-close p-link", "pRipple", "", 3, "click", "keydown.enter", 4, "ngIf"], [3, "ngClass"], [1, "p-toast-message-text"], [1, "p-toast-summary"], [1, "p-toast-detail"], ["type", "button", "pRipple", "", 1, "p-toast-icon-close", "p-link", 3, "click", "keydown.enter"], [1, "p-toast-icon-close-icon", "pi", "pi-times"]],
+  template: function ToastItem_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0, 1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("mouseenter", function ToastItem_Template_div_mouseenter_0_listener() {
+        return ctx.onMouseEnter();
+      })("mouseleave", function ToastItem_Template_div_mouseleave_0_listener() {
+        return ctx.onMouseLeave();
+      });
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, ToastItem_ng_container_3_Template, 7, 10, "ng-container", 3);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, ToastItem_ng_container_4_Template, 1, 0, "ng-container", 4);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, ToastItem_button_5_Template, 2, 0, "button", 5);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    }
+
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx.message.styleClass);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](10, _c2, "p-toast-message-" + ctx.message.severity))("@messageState", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](17, _c4, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction4"](12, _c3, ctx.showTransformOptions, ctx.hideTransformOptions, ctx.showTransitionOptions, ctx.hideTransitionOptions)));
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵattribute"]("id", ctx.message.id);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", ctx.message.contentStyleClass);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.template);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngTemplateOutlet", ctx.template)("ngTemplateOutletContext", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](19, _c5, ctx.message));
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.message.closable !== false);
+    }
+  },
+  directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_1__.NgIf, _angular_common__WEBPACK_IMPORTED_MODULE_1__.NgTemplateOutlet, primeng_ripple__WEBPACK_IMPORTED_MODULE_2__.Ripple],
+  encapsulation: 2,
+  data: {
+    animation: [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.trigger)('messageState', [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.state)('visible', (0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.style)({
+      transform: 'translateY(0)',
+      opacity: 1
+    })), (0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.transition)('void => *', [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.style)({
+      transform: '{{showTransformParams}}',
+      opacity: 0
+    }), (0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.animate)('{{showTransitionParams}}')]), (0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.transition)('* => void', [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.animate)('{{hideTransitionParams}}', (0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.style)({
+      height: 0,
+      opacity: 0,
+      transform: '{{hideTransformParams}}'
+    }))])])]
+  },
+  changeDetection: 0
+});
+
+(function () {
+  (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ToastItem, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Component,
+    args: [{
+      selector: 'p-toastItem',
+      template: `
+        <div #container [attr.id]="message.id" [class]="message.styleClass" [ngClass]="['p-toast-message-' + message.severity, 'p-toast-message']" [@messageState]="{value: 'visible', params: {showTransformParams: showTransformOptions, hideTransformParams: hideTransformOptions, showTransitionParams: showTransitionOptions, hideTransitionParams: hideTransitionOptions}}"
+                (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+            <div class="p-toast-message-content" role="alert" aria-live="assertive" aria-atomic="true"  [ngClass]="message.contentStyleClass">
+                <ng-container *ngIf="!template">
+                    <span [class]="'p-toast-message-icon pi' + (message.icon ? ' ' + message.icon : '')" [ngClass]="{'pi-info-circle': message.severity == 'info', 'pi-exclamation-triangle': message.severity == 'warn',
+                        'pi-times-circle': message.severity == 'error', 'pi-check' :message.severity == 'success'}"></span>
+                    <div class="p-toast-message-text">
+                        <div class="p-toast-summary">{{message.summary}}</div>
+                        <div class="p-toast-detail">{{message.detail}}</div>
+                    </div>
+                </ng-container>
+                <ng-container *ngTemplateOutlet="template; context: {$implicit: message}"></ng-container>
+                <button type="button" class="p-toast-icon-close p-link" (click)="onCloseIconClick($event)" (keydown.enter)="onCloseIconClick($event)" *ngIf="message.closable !== false" pRipple>
+                    <span class="p-toast-icon-close-icon pi pi-times"></span>
+                </button>
+            </div>
+        </div>
+    `,
+      animations: [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.trigger)('messageState', [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.state)('visible', (0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.style)({
+        transform: 'translateY(0)',
+        opacity: 1
+      })), (0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.transition)('void => *', [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.style)({
+        transform: '{{showTransformParams}}',
+        opacity: 0
+      }), (0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.animate)('{{showTransitionParams}}')]), (0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.transition)('* => void', [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.animate)('{{hideTransitionParams}}', (0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.style)({
+        height: 0,
+        opacity: 0,
+        transform: '{{hideTransformParams}}'
+      }))])])],
+      encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ViewEncapsulation.None,
+      changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectionStrategy.OnPush,
+      host: {
+        'class': 'p-element'
+      }
+    }]
+  }], function () {
+    return [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.NgZone
+    }];
+  }, {
+    message: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    index: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    template: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    showTransformOptions: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    hideTransformOptions: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    showTransitionOptions: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    hideTransitionOptions: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    onClose: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Output
+    }],
+    containerViewChild: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ViewChild,
+      args: ['container']
+    }]
+  });
+})();
+
+class Toast {
+  constructor(messageService, cd, config) {
+    this.messageService = messageService;
+    this.cd = cd;
+    this.config = config;
+    this.autoZIndex = true;
+    this.baseZIndex = 0;
+    this.position = 'top-right';
+    this.preventOpenDuplicates = false;
+    this.preventDuplicates = false;
+    this.showTransformOptions = 'translateY(100%)';
+    this.hideTransformOptions = 'translateY(-100%)';
+    this.showTransitionOptions = '300ms ease-out';
+    this.hideTransitionOptions = '250ms ease-in';
+    this.onClose = new _angular_core__WEBPACK_IMPORTED_MODULE_0__.EventEmitter();
+    this.id = (0,primeng_utils__WEBPACK_IMPORTED_MODULE_4__.UniqueComponentId)();
+  }
+
+  ngOnInit() {
+    this.messageSubscription = this.messageService.messageObserver.subscribe(messages => {
+      if (messages) {
+        if (messages instanceof Array) {
+          const filteredMessages = messages.filter(m => this.canAdd(m));
+          this.add(filteredMessages);
+        } else if (this.canAdd(messages)) {
+          this.add([messages]);
+        }
+      }
+    });
+    this.clearSubscription = this.messageService.clearObserver.subscribe(key => {
+      if (key) {
+        if (this.key === key) {
+          this.messages = null;
+        }
+      } else {
+        this.messages = null;
+      }
+
+      this.cd.markForCheck();
+    });
+  }
+
+  ngAfterViewInit() {
+    if (this.autoZIndex) {
+      primeng_utils__WEBPACK_IMPORTED_MODULE_4__.ZIndexUtils.set('modal', this.containerViewChild.nativeElement, this.baseZIndex || this.config.zIndex.modal);
+    }
+
+    if (this.breakpoints) {
+      this.createStyle();
+    }
+  }
+
+  add(messages) {
+    this.messages = this.messages ? [...this.messages, ...messages] : [...messages];
+
+    if (this.preventDuplicates) {
+      this.messagesArchieve = this.messagesArchieve ? [...this.messagesArchieve, ...messages] : [...messages];
+    }
+
+    this.cd.markForCheck();
+  }
+
+  canAdd(message) {
+    let allow = this.key === message.key;
+
+    if (allow && this.preventOpenDuplicates) {
+      allow = !this.containsMessage(this.messages, message);
+    }
+
+    if (allow && this.preventDuplicates) {
+      allow = !this.containsMessage(this.messagesArchieve, message);
+    }
+
+    return allow;
+  }
+
+  containsMessage(collection, message) {
+    if (!collection) {
+      return false;
+    }
+
+    return collection.find(m => {
+      return m.summary === message.summary && m.detail == message.detail && m.severity === message.severity;
+    }) != null;
+  }
+
+  ngAfterContentInit() {
+    this.templates.forEach(item => {
+      switch (item.getType()) {
+        case 'message':
+          this.template = item.template;
+          break;
+
+        default:
+          this.template = item.template;
+          break;
+      }
+    });
+  }
+
+  onMessageClose(event) {
+    this.messages.splice(event.index, 1);
+    this.onClose.emit({
+      message: event.message
+    });
+    this.cd.detectChanges();
+  }
+
+  onAnimationStart(event) {
+    if (event.fromState === 'void' && this.autoZIndex) {
+      this.containerViewChild.nativeElement.style.zIndex = String(this.baseZIndex + ++primeng_dom__WEBPACK_IMPORTED_MODULE_5__.DomHandler.zindex);
+      this.containerViewChild.nativeElement.setAttribute(this.id, '');
+    }
+  }
+
+  createStyle() {
+    if (!this.styleElement) {
+      this.styleElement = document.createElement('style');
+      this.styleElement.type = 'text/css';
+      document.head.appendChild(this.styleElement);
+      let innerHTML = '';
+
+      for (let breakpoint in this.breakpoints) {
+        let breakpointStyle = '';
+
+        for (let styleProp in this.breakpoints[breakpoint]) {
+          breakpointStyle += styleProp + ':' + this.breakpoints[breakpoint][styleProp] + ' !important;';
+        }
+
+        innerHTML += `
+                    @media screen and (max-width: ${breakpoint}) {
+                        .p-toast[${this.id}] {
+                           ${breakpointStyle}
+                        }
+                    }
+                `;
+      }
+
+      this.styleElement.innerHTML = innerHTML;
+    }
+  }
+
+  destroyStyle() {
+    if (this.styleElement) {
+      document.head.removeChild(this.styleElement);
+      this.styleElement = null;
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.messageSubscription) {
+      this.messageSubscription.unsubscribe();
+    }
+
+    if (this.containerViewChild && this.autoZIndex) {
+      primeng_utils__WEBPACK_IMPORTED_MODULE_4__.ZIndexUtils.clear(this.containerViewChild.nativeElement);
+    }
+
+    if (this.clearSubscription) {
+      this.clearSubscription.unsubscribe();
+    }
+
+    this.destroyStyle();
+  }
+
+}
+
+Toast.ɵfac = function Toast_Factory(t) {
+  return new (t || Toast)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](primeng_api__WEBPACK_IMPORTED_MODULE_6__.MessageService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectorRef), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](primeng_api__WEBPACK_IMPORTED_MODULE_6__.PrimeNGConfig));
+};
+
+Toast.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: Toast,
+  selectors: [["p-toast"]],
+  contentQueries: function Toast_ContentQueries(rf, ctx, dirIndex) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵcontentQuery"](dirIndex, primeng_api__WEBPACK_IMPORTED_MODULE_6__.PrimeTemplate, 4);
+    }
+
+    if (rf & 2) {
+      let _t;
+
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.templates = _t);
+    }
+  },
+  viewQuery: function Toast_Query(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_c0, 5);
+    }
+
+    if (rf & 2) {
+      let _t;
+
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.containerViewChild = _t.first);
+    }
+  },
+  hostAttrs: [1, "p-element"],
+  inputs: {
+    key: "key",
+    autoZIndex: "autoZIndex",
+    baseZIndex: "baseZIndex",
+    style: "style",
+    styleClass: "styleClass",
+    position: "position",
+    preventOpenDuplicates: "preventOpenDuplicates",
+    preventDuplicates: "preventDuplicates",
+    showTransformOptions: "showTransformOptions",
+    hideTransformOptions: "hideTransformOptions",
+    showTransitionOptions: "showTransitionOptions",
+    hideTransitionOptions: "hideTransitionOptions",
+    breakpoints: "breakpoints"
+  },
+  outputs: {
+    onClose: "onClose"
+  },
+  decls: 3,
+  vars: 5,
+  consts: [[3, "ngClass", "ngStyle"], ["container", ""], [3, "message", "index", "template", "showTransformOptions", "hideTransformOptions", "showTransitionOptions", "hideTransitionOptions", "onClose", 4, "ngFor", "ngForOf"], [3, "message", "index", "template", "showTransformOptions", "hideTransformOptions", "showTransitionOptions", "hideTransitionOptions", "onClose"]],
+  template: function Toast_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0, 1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, Toast_p_toastItem_2_Template, 1, 8, "p-toastItem", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    }
+
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassMap"](ctx.styleClass);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", "p-toast p-component p-toast-" + ctx.position)("ngStyle", ctx.style);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.messages);
+    }
+  },
+  directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_1__.NgStyle, _angular_common__WEBPACK_IMPORTED_MODULE_1__.NgForOf, ToastItem],
+  styles: [".p-toast{position:fixed;width:25rem}.p-toast-message{overflow:hidden}.p-toast-message-content{display:flex;align-items:flex-start}.p-toast-message-text{flex:1 1 auto}.p-toast-top-right{top:20px;right:20px}.p-toast-top-left{top:20px;left:20px}.p-toast-bottom-left{bottom:20px;left:20px}.p-toast-bottom-right{bottom:20px;right:20px}.p-toast-top-center{top:20px;left:50%;transform:translateX(-50%)}.p-toast-bottom-center{bottom:20px;left:50%;transform:translateX(-50%)}.p-toast-center{left:50%;top:50%;min-width:20vw;transform:translate(-50%,-50%)}.p-toast-icon-close{display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}.p-toast-icon-close.p-link{cursor:pointer}"],
+  encapsulation: 2,
+  data: {
+    animation: [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.trigger)('toastAnimation', [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.transition)(':enter, :leave', [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.query)('@*', (0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.animateChild)())])])]
+  },
+  changeDetection: 0
+});
+
+(function () {
+  (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](Toast, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Component,
+    args: [{
+      selector: 'p-toast',
+      template: `
+        <div #container [ngClass]="'p-toast p-component p-toast-' + position" [ngStyle]="style" [class]="styleClass">
+            <p-toastItem *ngFor="let msg of messages; let i=index" [message]="msg" [index]="i" (onClose)="onMessageClose($event)"
+                    [template]="template" @toastAnimation (@toastAnimation.start)="onAnimationStart($event)"
+                    [showTransformOptions]="showTransformOptions" [hideTransformOptions]="hideTransformOptions"
+                    [showTransitionOptions]="showTransitionOptions" [hideTransitionOptions]="hideTransitionOptions"></p-toastItem>
+        </div>
+    `,
+      animations: [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.trigger)('toastAnimation', [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.transition)(':enter, :leave', [(0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.query)('@*', (0,_angular_animations__WEBPACK_IMPORTED_MODULE_3__.animateChild)())])])],
+      changeDetection: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectionStrategy.OnPush,
+      encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ViewEncapsulation.None,
+      styleUrls: ['./toast.css'],
+      host: {
+        'class': 'p-element'
+      }
+    }]
+  }], function () {
+    return [{
+      type: primeng_api__WEBPACK_IMPORTED_MODULE_6__.MessageService
+    }, {
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ChangeDetectorRef
+    }, {
+      type: primeng_api__WEBPACK_IMPORTED_MODULE_6__.PrimeNGConfig
+    }];
+  }, {
+    key: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    autoZIndex: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    baseZIndex: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    style: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    styleClass: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    position: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    preventOpenDuplicates: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    preventDuplicates: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    showTransformOptions: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    hideTransformOptions: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    showTransitionOptions: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    hideTransitionOptions: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    breakpoints: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Input
+    }],
+    onClose: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.Output
+    }],
+    containerViewChild: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ViewChild,
+      args: ['container']
+    }],
+    templates: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.ContentChildren,
+      args: [primeng_api__WEBPACK_IMPORTED_MODULE_6__.PrimeTemplate]
+    }]
+  });
+})();
+
+class ToastModule {}
+
+ToastModule.ɵfac = function ToastModule_Factory(t) {
+  return new (t || ToastModule)();
+};
+
+ToastModule.ɵmod = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+  type: ToastModule
+});
+ToastModule.ɵinj = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+  imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__.CommonModule, primeng_ripple__WEBPACK_IMPORTED_MODULE_2__.RippleModule], primeng_api__WEBPACK_IMPORTED_MODULE_6__.SharedModule]
+});
+
+(function () {
+  (typeof ngDevMode === "undefined" || ngDevMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ToastModule, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_0__.NgModule,
+    args: [{
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__.CommonModule, primeng_ripple__WEBPACK_IMPORTED_MODULE_2__.RippleModule],
+      exports: [Toast, primeng_api__WEBPACK_IMPORTED_MODULE_6__.SharedModule],
+      declarations: [Toast, ToastItem]
+    }]
+  }], null, null);
+})();
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+ //# sourceMappingURL=primeng-toast.js.map
 
 /***/ }),
 

@@ -1,6 +1,7 @@
 package com.jumia.phonebook.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.List;
 
@@ -50,195 +51,91 @@ public class CustomerServiceTest extends IntegrationTest {
 
   @Test
   public void testFindAllCustomers() {
+    //When
     Pageable pageable = PageRequest.of(0, 4);
     Page<Customer> customerPage = new PageImpl<>(getAllCustomers(), pageable, 4);
     Mockito.when(customerRepository.findAll(pageable)).thenReturn(customerPage);
 
+    //Then
     Page<CustomerDTO> expectedCustomerDTOPage = customerService.filterCustomers(null, null, pageable);
+
+    //Result
     assertEquals(expectedCustomerDTOPage.getTotalElements(), 4);
   }
 
   @Test
   public void testFindAllCustomersWithNoPaginationInfo() {
+    //When
     Pageable pageable = Pageable.unpaged();
     Page<Customer> customerPage = new PageImpl<>(getAllCustomers());
-
     Mockito.when(customerRepository.findAll(pageable)).thenReturn(customerPage);
+
+    //Then
     Page<CustomerDTO> expectedCustomerDTOPage = customerService.filterCustomers(null, null, pageable);
+
+    //Result
     assertEquals(expectedCustomerDTOPage.getTotalElements(), 4);
   }
 
   @Test
   public void testFilterCustomersByCountryName() {
+    //When
     Pageable pageable = PageRequest.of(0, 10);
     Page<Customer> customerPage = new PageImpl<>(Lists.list(getCameroonValidCustomer()));
-
     Mockito.when(customerRepository.findByPhoneStartsWith("(237)", pageable)).thenReturn(customerPage);
     Mockito.when(countryInfoCache.getCountryCode("Cameroon")).thenReturn("+237");
 
+    //Then
     Page<CustomerDTO> expectedCustomerDTOPage = customerService.filterCustomers("Cameroon", null, pageable);
+
+    //Result
     assertEquals(expectedCustomerDTOPage.getTotalElements(), 1);
   }
 
   @Test
   public void testFilterCustomersByCountryNameWithNoPaginationInfo() {
+    //When
     Pageable pageable = Pageable.unpaged();
     Page<Customer> customerPage = new PageImpl<>(Lists.list(getCameroonValidCustomer()));
-
     Mockito.when(customerRepository.findByPhoneStartsWith("(237)", pageable)).thenReturn(customerPage);
     Mockito.when(countryInfoCache.getCountryCode("Cameroon")).thenReturn("+237");
 
+    //Then
     Page<CustomerDTO> expectedCustomerDTOPage = customerService.filterCustomers("Cameroon", null, pageable);
+
+    //Result
     assertEquals(expectedCustomerDTOPage.getTotalElements(), 1);
   }
 
-//  @Test
-//  public void testFilterCustomersByTrueValidity() {
-//    Pageable pageable = PageRequest.of(0, 10);
-//    List<Customer> customerList = getAllCustomers();
-////    Page<Customer> validCustomerPage = new PageImpl<>(Lists.list(getUgandaValidCustomer(), getCameroonValidCustomer()));
-////    Page<CustomerDTO> customerDTOPage = validCustomerPage.map(customer ->
-////        customerConversion.convertToDto(customer));
-//
-//    Mockito.when(customerRepository.findAll()).thenReturn(customerList);
-//    Page<CustomerDTO> expectedCustomerDTOPage = customerService.filterCustomers(null, true, pageable);
-//    assertEquals(expectedCustomerDTOPage.getTotalElements(), 2);
-//  }
-//
-//  @Test
-//  public void testFilterCustomersByTrueValidityWithNoPagintaionInfo() {
-//    Pageable pageable = Pageable.unpaged();
-//    List<Customer> customerList = getAllCustomers();
-//
-////    Page<Customer> validCustomerPage = new PageImpl<>(Lists.list(getUgandaValidCustomer(), getCameroonValidCustomer()));
-////    Page<CustomerDTO> customerDTOPage = validCustomerPage.map(customer ->
-////        customerConversion.convertToDto(customer));
-//    Mockito.when(customerRepository.findAll()).thenReturn(customerList);
-//    CustomerDTO customerDTO = new CustomerDTO();
-//    customerDTO.setValid(true);
-//    for (Customer customer: customerList) {
-//      Mockito.when(customerConversion.convertToDto(customer)).thenReturn(customerDTO);
-//    }
-//
-//    Page<CustomerDTO> expectedCustomerDTOPage = customerService.filterCustomers(null, true, pageable);
-//    assertEquals(expectedCustomerDTOPage.getTotalElements(), 2);
-//  }
+  @Test
+  public void testFilterCustomersByInvalidCountryName() {
+    //When
+    Pageable pageable = PageRequest.of(0, 10);
+    Page<Customer> customerPage = new PageImpl<>(Lists.list(getCameroonValidCustomer()));
+    Mockito.when(customerRepository.findByPhoneStartsWith("(237)", pageable)).thenReturn(customerPage);
+    Mockito.when(countryInfoCache.getCountryCode("Cameroon")).thenReturn("+237");
 
-//  @Test
-//  public void testFilterCustomersByFalseValidity() {
-//    Pageable pageable = PageRequest.of(0, 10);
-//    Page<Customer> customerPage = new PageImpl<>(getAllCustomers());
-//    Page<Customer> validCustomerPage = new PageImpl<>(Lists.list(getMoroccoInvalidCustomer(), getMozambiqueInvalidCustomer()));
-//    Page<CustomerDTO> customerDTOPage = validCustomerPage.map(customer ->
-//        customerConversion.convertToDto(customer));
-//
-//    Mockito.when(customerRepository.findAll(pageable)).thenReturn(customerPage);
-//    Mockito.when(customerService.filterCustomers(Mockito.anyString(), Mockito.anyBoolean(), Mockito.any())).thenReturn(customerDTOPage);
-//    Page<CustomerDTO> expectedCustomerDTOPage = customerService.filterCustomers("", false, pageable);
-//    assertEquals(expectedCustomerDTOPage.getTotalElements(), 2);
-//  }
-//
-//  @Test
-//  public void testFilterCustomersByFalseValidityWithNoPagintaionInfo() {
-//    Pageable pageable = Pageable.unpaged();
-//    Page<Customer> customerPage = new PageImpl<>(getAllCustomers());
-//    Page<Customer> validCustomerPage = new PageImpl<>(Lists.list(getMoroccoInvalidCustomer(), getMozambiqueInvalidCustomer()));
-//    Page<CustomerDTO> customerDTOPage = validCustomerPage.map(customer ->
-//        customerConversion.convertToDto(customer));
-//
-//    Mockito.when(customerRepository.findAll(pageable)).thenReturn(customerPage);
-//    Mockito.when(customerService.filterCustomers(Mockito.anyString(), Mockito.anyBoolean(), Mockito.any())).thenReturn(customerDTOPage);
-//    Page<CustomerDTO> expectedCustomerDTOPage = customerService.filterCustomers("", false, pageable);
-//    assertEquals(expectedCustomerDTOPage.getTotalElements(), 2);
-//  }
-//
-//  @Test
-//  public void testFilterCustomersByCountryNameAndTrueValidity() {
-//    Pageable pageable = PageRequest.of(0, 10);
-////    Page<Customer> customerPage = new PageImpl<>(Lists.list(getUgandaValidCustomer()));
-////    Page<CustomerDTO> customerDTOPage = customerPage.map(customer ->
-////        customerConversion.convertToDto(customer));
-//
-//    Mockito.when(customerRepository.findByPhoneStartsWith("(256)")).thenReturn(Lists.list(getUgandaValidCustomer()));
-//    Mockito.when(countryInfoCache.getCountryCode("Uganda")).thenReturn("+256");
-//
-//
-//    //    Mockito.when(customerService.filterCustomers(Mockito.anyString(), Mockito.anyBoolean(), Mockito.any())).thenReturn(customerDTOPage);
-//    Page<CustomerDTO> expectedCustomerDTOPage = customerService.filterCustomers("Uganda", true, pageable);
-//    assertEquals(expectedCustomerDTOPage.getTotalElements(), 1);
-//  }
-//
-//  @Test
-//  public void testFilterCustomersByCountryNameAndTrueValidityWithNoPaginationInfo() {
-//    Pageable pageable = Pageable.unpaged();
-//    Page<Customer> customerPage = new PageImpl<>(Lists.list(getUgandaValidCustomer()));
-//    Page<CustomerDTO> customerDTOPage = customerPage.map(customer ->
-//        customerConversion.convertToDto(customer));
-//
-//    Mockito.when(customerRepository.findByPhoneStartsWith("(256)", pageable)).thenReturn(customerPage);
-//    Mockito.when(customerService.filterCustomers(Mockito.anyString(), Mockito.anyBoolean(), Mockito.any())).thenReturn(customerDTOPage);
-//    Page<CustomerDTO> expectedCustomerDTOPage = customerService.filterCustomers("Uganda", true, pageable);
-//    assertEquals(expectedCustomerDTOPage.getTotalElements(), 1);
-//  }
-//
-//  @Test
-//  public void testFilterCustomersByCountryNameAndFalseValidity() {
-//    Pageable pageable = PageRequest.of(0, 10);
-//    Page<Customer> customerPage = new PageImpl<>(Lists.list(getMoroccoInvalidCustomer()));
-//    Page<CustomerDTO> customerDTOPage = customerPage.map(customer ->
-//        customerConversion.convertToDto(customer));
-//
-//    Mockito.when(customerRepository.findByPhoneStartsWith("(212)", pageable)).thenReturn(customerPage);
-//    Mockito.when(customerService.filterCustomers(Mockito.anyString(), Mockito.anyBoolean(), Mockito.any())).thenReturn(customerDTOPage);
-//    Page<CustomerDTO> expectedCustomerDTOPage = customerService.filterCustomers("Morocco", false, pageable);
-//    assertEquals(expectedCustomerDTOPage.getTotalElements(), 1);
-//  }
-//
-//  @Test
-//  public void testFilterCustomersByCountryNameAndFalseValidityWithNoPaginationInfo() {
-//    Pageable pageable = PageRequest.of(0, 10);
-//    Page<Customer> customerPage = new PageImpl<>(Lists.list(getMoroccoInvalidCustomer()));
-//    Page<CustomerDTO> customerDTOPage = customerPage.map(customer ->
-//        customerConversion.convertToDto(customer));
-//
-//    Mockito.when(customerRepository.findByPhoneStartsWith("(212)", pageable)).thenReturn(customerPage);
-////    Mockito.when(customerService.filterCustomers("Morocco", false, pageable)).thenReturn(
-////        (Page<CustomerDTO>) Mockito.any(CustomerDTO.class));
-//    Page<CustomerDTO> expectedCustomerDTOPage = customerService.filterCustomers("Morocco", false, pageable);
-//    assertEquals(expectedCustomerDTOPage.getTotalElements(), 1);
-//  }
-//
-//  @Test
-//  public void testFilterCustomersByInvalidCountryName() {
-//    Pageable pageable = PageRequest.of(0, 10);
-//    Mockito.when(customerService.filterCustomers(Mockito.anyString(), Mockito.isNull(), Mockito.any())).thenThrow(new IllegalArgumentException());
-//    assertThrows(IllegalArgumentException.class, () -> {customerService.filterCustomers("invalidCountryName", null, pageable);
-//    });
-//  }
-//
-//  @Test
-//  public void testFilterCustomersByInvalidCountryNameWithNoPaginationInfo() {
-//    Pageable pageable = Pageable.unpaged();
-//    Mockito.when(customerService.filterCustomers(Mockito.anyString(), Mockito.isNull(), Mockito.any())).thenThrow(new IllegalArgumentException());
-//    assertThrows(IllegalArgumentException.class, () -> {customerService.filterCustomers("invalidCountryName", null, pageable);
-//    });
-//  }
-//
-//  @Test
-//  public void testFilterCustomersByInvalidCountryNameAndState() {
-//    Pageable pageable = PageRequest.of(0, 10);
-//    Mockito.when(customerService.filterCustomers(Mockito.anyString(), Mockito.anyBoolean(), Mockito.any())).thenThrow(new IllegalArgumentException());
-//    assertThrows(IllegalArgumentException.class, () -> {customerService.filterCustomers("invalidCountryName", Boolean.valueOf("invalidState"), pageable);
-//    });
-//  }
-//
-//  @Test
-//  public void testFilterCustomersByInvalidCountryNameAndStateWithNoPaginationInfo() {
-//    Pageable pageable = Pageable.unpaged();
-//    Mockito.when(customerService.filterCustomers(Mockito.anyString(),  Mockito.anyBoolean(), Mockito.any())).thenThrow(new IllegalArgumentException());
-//    assertThrows(IllegalArgumentException.class, () -> {customerService.filterCustomers("invalidCountryName", Boolean.valueOf("invalidState"), pageable);
-//    });
-//  }
+    //Then
+    assertThrows(IllegalArgumentException.class,
+        () -> {
+      customerService.filterCustomers("invalidCountryName", null, pageable);
+    });
+  }
+
+  @Test
+  public void testFilterCustomersByInvalidCountryNameWithNoPaginationInfo() {
+    //When
+    Pageable pageable = Pageable.unpaged();
+    Page<Customer> customerPage = new PageImpl<>(Lists.list(getCameroonValidCustomer()));
+    Mockito.when(customerRepository.findByPhoneStartsWith("(237)", pageable)).thenReturn(customerPage);
+    Mockito.when(countryInfoCache.getCountryCode("Cameroon")).thenReturn("+237");
+
+    //Then
+    assertThrows(IllegalArgumentException.class,
+        () -> {
+      customerService.filterCustomers("invalidCountryName", null, pageable);
+    });
+  }
 
   private List<Customer> getAllCustomers() {
     Customer UgandaValidCustomer = getUgandaValidCustomer();

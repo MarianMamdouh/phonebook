@@ -56,7 +56,7 @@ public class CustomerControllerTestIT extends IntegrationTest {
         .andExpect(jsonPath("$.totalElements").value("4"))
         .andExpect(jsonPath("$.content", hasSize(4)))
         .andExpect(jsonPath("$.content[0].name").value("Uganda Valid Customer"))
-            .andExpect(jsonPath("$.content[0].phone").value("(256) 714660221"))
+        .andExpect(jsonPath("$.content[0].phone").value("(256) 714660221"))
         .andExpect(jsonPath("$.content[0].countryName").value("Uganda"))
         .andExpect(jsonPath("$.content[0].valid").value("true"));
   }
