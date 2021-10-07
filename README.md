@@ -89,7 +89,7 @@ The project can run either by running the JAR file or by building a docker image
    
 4. At the same previous path run docker image on port 8080 using 
    ```sh
-   docker run –-rm -it -p 8080:8080 phone-app
+   docker run --rm -it -p 8080:8080 phone-app
    
 5. The application is now up and can be accessed via  
    ```sh
