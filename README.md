@@ -181,10 +181,15 @@ list and categorize country phone numbers by country name, phone number and phon
 ### Filters
 
 <p float="left">
+  <p>Filter by Morocco country name</p>
   <img src="showcase/filterByCountryName=Morocco.png" style="border: 1px solid black" width="100%" />
+  <p>Filter by true validity</p>
   <img src="showcase/FilterByValidity=true.png" style="border: 1px solid black" width="100%" />
+  <p>Filter by false validity</p>
   <img src="showcase/FilterByValidity=false.png" style="border: 1px solid black" width="100%" />
+  <p>Filter by Ethiopia country name and true validity</p>
   <img src="showcase/searchByCountryName=EthiopiaAndValidity=true.png" style="border: 1px solid black" width="100%" />
+  <p>Filter by Cameroon country name and false validity</p>
   <img src="showcase/FilterByCountryName=CameroonAndValidity=false.png" style="border: 1px solid black" width="100%" />
 </p>
 
