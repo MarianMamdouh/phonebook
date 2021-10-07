@@ -58,7 +58,7 @@ The project can run either by running the JAR file or by building a docker image
    ```sh
    git clone https://github.com/MarianMamdouh/phonebook.git
    ```
-2. Move to /phonebook/phonebook-app and run 
+2. Move to /phonebook and run 
    ```sh
    mvn clean install
    ```
@@ -79,7 +79,7 @@ The project can run either by running the JAR file or by building a docker image
    ```sh
    git clone https://github.com/MarianMamdouh/phonebook.git
    ```
-2. Move to /phonebook/phonebook-app and run 
+2. Move to /phonebook and run 
    ```sh
    mvn clean install
    ```
@@ -173,5 +173,31 @@ list and categorize country phone numbers by country name, phone number and phon
 <!-- USAGE EXAMPLES -->
 ## Screenshots
 
+### Find all customers
+<p float="left">
+  <img src="showcase/findAllCustomers.png" style="border: 1px solid black" width="100%" />
+</p>
+
+### Filters
+
+<p float="left">
+  <img src="showcase/filterByCountryName=Morocco.png" style="border: 1px solid black" width="100%" />
+  <img src="showcase/FilterByValidity=true.png" style="border: 1px solid black" width="100%" />
+  <img src="showcase/FilterByValidity=false.png" style="border: 1px solid black" width="100%" />
+  <img src="showcase/searchByCountryName=EthiopiaAndValidity=true.png" style="border: 1px solid black" width="100%" />
+  <img src="showcase/FilterByCountryName=CameroonAndValidity=false.png" style="border: 1px solid black" width="100%" />
+</p>
+
+### Error case
+
+<p float="left">
+  <img src="showcase/errorcase.png" style="border: 1px solid black" width="100%" />
+</p>
+
+### Swagger API Documentation
+
+<p float="left">
+  <img src="showcase/SwaggerAPIDocumentation.png" style="border: 1px solid black" width="100%" />
+</p>
 
 <p align="right">(<a href="#top">back to top</a>)</p>

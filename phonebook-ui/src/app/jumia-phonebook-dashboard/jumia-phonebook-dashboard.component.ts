@@ -46,17 +46,20 @@ export class JumiaPhonebookDashboardComponent implements OnInit {
             .then(response => {
                 this.customers = response.content;
                 this.totalRecords = response.totalElements;
-            }
-        ).catch(() => {
+            })
+            .catch(() => {
             this.showError("Retrieving customer data has failed!");
         });
     }
 
     getCountryNames() {
-        this.countryService.getCountryNames().then(response => {
+        this.countryService.getCountryNames()
+            .then(response => {
             this.fillCountryNamesOptions(response);
-            }
-        )
+            })
+            .catch(() => {
+            this.showError("Retrieving country names has failed!");
+        });
     }
 
     fillStateOptions() {
