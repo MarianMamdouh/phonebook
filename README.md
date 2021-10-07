@@ -153,6 +153,7 @@ The project can run either by running the JAR file or by building a docker image
 * Add a support for creating regexp() function to make the REGEXP operator available in SQLite3 in order to 
   validting phone numbers using database instead of loading our whole data in our app memory and do the filtering ourselves.
 * Security & validation enhancements.
+* Adding logback.xml file.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
