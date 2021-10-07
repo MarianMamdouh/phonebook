@@ -25,9 +25,6 @@ public class CustomerControllerTestIT extends IntegrationTest {
   @Autowired
   private CustomerRepository customerRepository;
 
-  @Autowired
-  private CountryInfoCache countryInfoCache;
-
   @BeforeEach
   public void setUp(){
     mockMvc = webAppContextSetup(context).build();
