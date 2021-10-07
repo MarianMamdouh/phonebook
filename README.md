@@ -1,4 +1,4 @@
-# Phone Numbers Validator app
+# Phone Numbers Validator App
 
 
 <!-- TABLE OF CONTENTS -->
