@@ -83,11 +83,11 @@ The project can run either by running the JAR file or by building a docker image
    ```sh
    mvn clean install
    ```
-3. Build a docker image with the name phone-app using 
+3. Move to /phonebook/phonebook-app and build a docker image with the name phone-app using 
    ```sh
    docker build -t phone-app .
    
-4. Run docker image on port 8080 using 
+4. At the same previous path run docker image on port 8080 using 
    ```sh
    docker run –-rm -it -p 8080:8080 phone-app
    
